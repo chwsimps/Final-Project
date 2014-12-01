@@ -24,15 +24,16 @@
   <body>
 
     <div class="full">
-      <a href="#/signup" class="signup_btn">Sign Up</a>
-      <!-- <a href="#/login" class="signup_btn">Login</a> -->
-      <span id="loggedIn"></span>
-      <button id="logOut">Logout</button>
+
+      <span id="loggedIn"></span><button id="logOut">Logout</button>
+
       <a href="/"><h1>Routines App</h1></a>
 
       <div id="LoginSection"></div>
 
-    </div>
+      <div id="MainSection"></div>
+
+    </div> <!--div class="full"-->
 
     <script type="text/template" id='user-signup'>
       <form id="SignUp">
@@ -47,7 +48,8 @@
       <form id="Login">
         <input id="userName" type="text" placeholder="Enter User Name" />
         <input id="password" type="password" placeholder="Enter Password" />
-        <input id="userEmail" type="email" placeholder="Enter Email" />
+        <!--<input id="userEmail" type="email" placeholder="Enter Email" />-->
+        <a href="#/signup" class="signup_btn">Sign Up</a>
         <button>Log In</button>
       </form>
     </script>
@@ -77,6 +79,7 @@
     <script src="scripts/routes/app_router.js"></script>
     <script src="scripts/views/login_view.js"></script>
     <script src="scripts/views/signup_view.js"></script>
+    <script src="scripts/views/main_home_view.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
