@@ -9,9 +9,9 @@
 
     },
 
-    home: function (){
-      new App.Views.PublicPost({ collection: App.posts });
-    },
+    // home: function (){
+    //   new App.Views.PublicPost({ collection: App.posts });
+    // },
 
     userSignUp: function () {
       if(App.user) return App.router.navigate('', { trigger: true});
