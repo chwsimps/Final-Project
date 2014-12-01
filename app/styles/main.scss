@@ -3,15 +3,26 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+//Mixins
+@mixin display-box {
+  text-align: center;
+  width: 50%;
+  height: 200px;
+  margin-left: 25%;
+  margin-bottom: 20px;
+}
+
 // Custom Styles
 body {
+  @include outer-container;
   background-color: #eee;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
 }
 
+// Main Page & User Login/Signup View
+
 .full {
-  @include outer-container;
   font-size: 18px;
   font-weight: 200;
   .UserHeader {
@@ -23,7 +34,8 @@ body {
     h1 {
       font-size: 50px;
       display: inline-block;
-      margin-top: 5%;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
   }
   #loggedIn {
@@ -42,22 +54,51 @@ body {
 
 .LeftMP {
   @include span-columns(6);
-  text-align: center;
   #MorningRoutineDisplay {
-    width: 50%;
-    height: 200px;
+    @include display-box;
     background-color: orange;
-    margin-left: 25%;
   }
 }
 
 .RightMP {
   @include span-columns(6);
-  text-align: center;
   #NightRoutineDisplay {
-    width: 50%;
-    height: 200px;
+    @include display-box;
     background-color: lightblue;
-    margin-left: 25%;
+  }
+}
+
+// Parent Main Page View
+
+#ParentRoutines {
+  @include span-columns(6);
+  @include omega();
+  #ParentRoutinesDisplay {
+    @include display-box;
+    background-color: lightblue;
+  }
+}
+#ParentRewards {
+  @include span-columns(6);
+  @include omega();
+  #ParentRewardsDisplay {
+    @include display-box;
+    background-color: lightblue;
+  }
+}
+#ParentCharts {
+  @include span-columns(6);
+  @include omega();
+  #ParentChartsDisplay {
+    @include display-box;
+    background-color: lightblue;
+  }
+}
+#ParentTiming {
+  @include span-columns(6);
+  @include omega();
+  #ParentTimingDisplay {
+    @include display-box;
+    background-color: lightblue;
   }
 }
