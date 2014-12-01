@@ -6,8 +6,8 @@
 
       '' : 'home',
       'signup' : 'userSignUp',
-      'login' : 'userLogin'
-
+      'login' : 'userLogin',
+      'parent' : 'parentMain'
     },
 
     // home: function (){
@@ -25,6 +25,12 @@
       if(App.user) return App.router.navigate('', { trigger: true});
 
       new App.Views.LoginView();
+    },
+
+    parentMain: function () {
+      if(!App.user) return App.router.navigate('login', { trigger: true});
+
+      new App.Views.ParentHomeView();
     }
 
   });
