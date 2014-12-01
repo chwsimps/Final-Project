@@ -8,12 +8,12 @@
       'signup' : 'userSignUp',
       'login' : 'userLogin',
       'parent' : 'parentMain',
-      'parent_routines' : 'parentRoutines'
+      'parent_routines' : 'AddMorningRoutine'
     },
 
-    // home: function (){
-    //   new App.Views.PublicPost({ collection: App.posts });
-    // },
+    home: function (){
+      new App.Views.MainHomeView();
+    },
 
     userSignUp: function () {
       if(App.user) return App.router.navigate('', { trigger: true});
@@ -34,10 +34,12 @@
       new App.Views.ParentHomeView();
     },
 
-    parentRoutines: function () {
+    AddMorningRoutine: function () {
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
-      new App.Views.ParentRoutineView();
+      new App.Views.ParentAddRoutine();
+
+      new App.Views.ParentViewRoutine({ collection: App.tasks });
     }
 
   });

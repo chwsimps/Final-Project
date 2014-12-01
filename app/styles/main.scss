@@ -102,3 +102,13 @@ body {
     background-color: lightyellow;
   }
 }
+
+// Parent Routine Page
+
+#ParentRoutineMorning {
+  @include span-columns(6);
+}
+
+#ParentRoutineNight {
+  @include span-columns(6);
+}

@@ -53,7 +53,11 @@
         </div>
       </div> <!--id="MainSection"-->
 
+      <div id="ListSection"></div>
+
     </div> <!--class="full"-->
+
+    <!-- Login/Signup Scripts ================================== -->
 
     <script type="text/template" id='user-signup'>
       <form id="SignUp">
@@ -73,6 +77,8 @@
         <button>Log In</button>
       </form>
     </script>
+
+    <!-- Parents View Scripts ================================== -->
 
     <script type="text/template" id='parent-mainPage'>
       <div id="ParentRoutines">
@@ -105,10 +111,27 @@
       </div>
     </script>
 
-    <script type="text/template" id='parent-routines'>
-      <div id="name">
-        hello routines
+    <!-- Parents Routines Scripts ================================== -->
+
+    <script type="text/template" id='parent-add-routines'>
+      <div id="ParentRoutineMorning">
+        <form id="AddRoutine">
+          <input type="text" id="RoutineMorningInput" placeholder="Add Routine">
+          <button id="AddMorningRoutine">Add</button>
+        </form>
       </div>
+      <div id="ParentRoutineNight">
+        <form id="AddRoutine">
+          <input type="text" id="RoutineNightInput" placeholder="Add Routine">
+          <button id="AddNightRoutine">Add</button>
+        </form>
+      </div>
+    </script>
+
+    <script type="text/template" id='parent-view-routines'>
+      <li class="routines_list" id="<%= objectId %>">
+        <div id="morning_routine_list"><%= morning_routine %></div>
+      </li>
     </script>
 
     <!-- build:js scripts/vendor.js -->
@@ -136,7 +159,8 @@
     <script src="scripts/views/signup_view.js"></script>
     <script src="scripts/views/main_home_view.js"></script>
     <script src="scripts/views/parent_home_view.js"></script>
-    <script src="scripts/views/parent_routine_view.js"></script>
+    <script src="scripts/views/parent_add_routine.js"></script>
+    <script src="scripts/views/parent_view_routine.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
