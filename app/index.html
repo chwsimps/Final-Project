@@ -115,13 +115,13 @@
 
     <script type="text/template" id='parent-add-routines'>
       <div id="ParentRoutineMorning">
-        <form id="AddRoutine">
+        <form id="AddRoutineLeft">
           <input type="text" id="RoutineMorningInput" placeholder="Add Routine">
           <button id="AddMorningRoutine">Add</button>
         </form>
       </div>
       <div id="ParentRoutineNight">
-        <form id="AddRoutine">
+        <form id="AddRoutineRight">
           <input type="text" id="RoutineNightInput" placeholder="Add Routine">
           <button id="AddNightRoutine">Add</button>
         </form>
@@ -129,10 +129,19 @@
     </script>
 
     <script type="text/template" id='parent-view-routines'>
-      <li class="routines_list" id="<%= objectId %>">
-        <div id="morning_routine_list"><%= morning_routine %></div>
+      <li class="routines_list_morning" id="<%= objectId %>">
+        <a href='#/read/<%= objectId %>'>
+          <div id="morning_routine_list"><%= morning_routine %></div>
+        </a>
+      </li>
+      <li class="routines_list_night" id="<%= objectId %>">
+        <a href='#/edit/<%= objectId %>'>
+          <div id="night_routine_list"><%= night_routine %></div>
+        </a>
       </li>
     </script>
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

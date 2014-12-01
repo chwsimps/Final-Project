@@ -8,7 +8,8 @@
       'signup' : 'userSignUp',
       'login' : 'userLogin',
       'parent' : 'parentMain',
-      'parent_routines' : 'AddMorningRoutine'
+      'parent_routines' : 'AddMorningRoutine',
+      'parent_routines' : 'AddNightRoutine'
     },
 
     home: function (){
@@ -40,7 +41,15 @@
       new App.Views.ParentAddRoutine();
 
       new App.Views.ParentViewRoutine({ collection: App.tasks });
-    }
+    },
+
+    AddNightRoutine: function () {
+      if(!App.user) return App.router.navigate('login', { trigger: true});
+
+      new App.Views.ParentAddRoutine();
+
+      new App.Views.ParentViewRoutine({ collection: App.tasks });
+    },
 
   });
 

@@ -5,7 +5,8 @@
     className: 'ParentAddRoutines',
 
     events: {
-      'click #AddMorningRoutine' : 'AddMorningRoutine'
+      'click #AddMorningRoutine' : 'AddMorningRoutine',
+      'click #AddNightRoutine' : 'AddNightRoutine'
     },
 
     template: _.template($('#parent-add-routines').html()),
@@ -39,7 +40,28 @@
         }
       });
 
-      $('#AddRoutine')[0].reset();
+      $('#AddRoutineLeft')[0].reset();
+
+    },
+
+    AddNightRoutine: function (e) {
+      e.preventDefault();
+
+      var anr = new App.Models.Routine({
+        night_routine: $('#RoutineNightInput').val(),
+        user: App.user
+      });
+
+      anr.setACL(new Parse.ACL(App.user));
+
+      anr.save(null, {
+        success: function () {
+          App.tasks.add(anr);
+          App.router.navigate('parent_routines', { trigger: true });
+        }
+      });
+
+      $('#AddRoutineRight')[0].reset();
 
     }
 
