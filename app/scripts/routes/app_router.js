@@ -5,7 +5,8 @@
     routes: {
 
       '' : 'home',
-      'signup' : 'userSignUp'
+      'signup' : 'userSignUp',
+      'login' : 'userLogin'
 
     },
 
@@ -18,6 +19,12 @@
 
       new App.Views.SignUpView();
 
+    },
+
+    userLogin: function () {
+      if(App.user) return App.router.navigate('', { trigger: true});
+
+      new App.Views.LoginView();
     }
 
   });

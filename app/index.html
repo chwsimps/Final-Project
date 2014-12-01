@@ -24,9 +24,11 @@
   <body>
 
     <div class="full">
-      <a href="/"><h1>Routines App</h1></a>
-
       <a href="#/signup" class="signup_btn">Sign Up</a>
+      <!-- <a href="#/login" class="signup_btn">Login</a> -->
+      <span id="loggedIn"></span>
+      <button id="logOut">Logout</button>
+      <a href="/"><h1>Routines App</h1></a>
 
       <div id="LoginSection"></div>
 
@@ -40,6 +42,17 @@
         <button>Sign Up</button>
       </form>
     </script>
+
+    <script type="text/template" id='user-login'>
+      <form id="Login">
+        <input id="userName" type="text" placeholder="Enter User Name" />
+        <input id="password" type="password" placeholder="Enter Password" />
+        <input id="userEmail" type="email" placeholder="Enter Email" />
+        <button>Log In</button>
+      </form>
+    </script>
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

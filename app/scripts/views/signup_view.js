@@ -2,7 +2,7 @@
 
   App.Views.SignUpView = Parse.View.extend({
 
-    className: 'signingup',
+    className: 'signingUp',
 
     events: {
       'submit #SignUp' : 'userSignUp'
