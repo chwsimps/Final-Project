@@ -25,15 +25,35 @@
 
     <div class="full">
 
-      <span id="loggedIn"></span><button id="logOut">Logout</button>
+      <div class="UserHeader">
+        <span id="loggedIn"></span><button id="logOut">Logout</button>
+        <a href="#"><button id="ParentViewBtn">Parent View</button></a>
+      </div>
 
-      <a href="/"><h1>Routines App</h1></a>
+      <div class="MainTitle">
+        <a href="/"><h1>Routines App</h1></a>
+      </div>
 
       <div id="LoginSection"></div>
 
-      <div id="MainSection"></div>
+      <div id="MainSection">
+        <div class="LeftMP">
+          <a class="MorningRoutineMP" href="#/morning_routines">
+            <div id="MorningRoutineDisplay">
+              Morning Routines
+            </div>
+          </a>
+        </div>
+        <div class="RightMP">
+          <a class="NightRoutineMP" href="#/night_routines">
+            <div id="NightRoutineDisplay">
+              Bedtime Routines
+            </div>
+          </a>
+        </div>
+      </div> <!--id="MainSection"-->
 
-    </div> <!--div class="full"-->
+    </div> <!--class="full"-->
 
     <script type="text/template" id='user-signup'>
       <form id="SignUp">
@@ -80,6 +100,7 @@
     <script src="scripts/views/login_view.js"></script>
     <script src="scripts/views/signup_view.js"></script>
     <script src="scripts/views/main_home_view.js"></script>
+    <script src="scripts/views/parent_home_view.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
