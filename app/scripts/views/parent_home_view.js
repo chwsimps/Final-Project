@@ -5,7 +5,7 @@
     className: 'ParentHome',
 
     events: {
-      
+
     },
 
     template: _.template($('#parent-mainPage').html()),
@@ -17,6 +17,8 @@
     },
 
     render: function () {
+      $('#ListSection').empty();
+      $('#ListSection2').empty();
       this.$el.html(this.template);
     }
 

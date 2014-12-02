@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.ParentAddRoutine = Parse.View.extend({
+App.Views.ParentAddRoutine = Parse.View.extend({
 
     className: 'ParentAddRoutines',
 
@@ -51,5 +51,7 @@
     AddNightRoutine: function (e) {
       this.AddRoutine(e, '#RoutineNightInput', '#AddRoutineRight', 'night');
     }
-  })
+
+  });
+
 }());
