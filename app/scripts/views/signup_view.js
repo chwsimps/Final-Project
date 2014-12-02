@@ -34,7 +34,8 @@
       user.signUp(null, {
         success: function(user) {
           // Hooray! Let them use the app now.
-          App.router.navigate('#/login', { trigger: true });
+          App.updateUser();
+          App.router.navigate('', { trigger: true });
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
@@ -42,6 +43,7 @@
         }
       });
 
+      $('#LoginSection').empty();
     }
 
   });

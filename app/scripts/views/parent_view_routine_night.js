@@ -1,6 +1,6 @@
 (function () {
 
-  App.Views.ParentViewRoutine2 = Parse.View.extend({
+  App.Views.ParentViewRoutineNight = Parse.View.extend({
 
     tagName: 'ul',
 
@@ -8,7 +8,7 @@
 
     events: {},
 
-    template: _.template($('#parent-view-routines2').html()),
+    template: _.template($('#parent-view-routines-night').html()),
 
     initialize: function (options) {
       this.options = options;

@@ -10,7 +10,8 @@
       'parent' : 'parentMain',
       'parent_routines' : 'AddRoutine',
       'parent_rewards' : 'AddRewards',
-      'parent_timing' : 'AddTimeSetUp'
+      'parent_timing' : 'AddTimeSetUp',
+      'edit/:taskID' : 'EditRoutine'
     },
 
     home: function (){
@@ -42,10 +43,10 @@
       new App.Views.ParentAddRoutine();
 
       new App.Views.ParentViewRoutine({ collection: App.tasks });
-      new App.Views.ParentViewRoutine2({ collection: App.tasks });
+      new App.Views.ParentViewRoutineNight({ collection: App.tasks });
     },
 
-      AddRewards: function () {
+    AddRewards: function () {
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.ParentRewardView();
@@ -55,6 +56,13 @@
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.ParentTimingView();
+    },
+
+    EditRoutine: function (taskID) {
+      if(!App.user) return App.router.navigate('login', { trigger: true});
+
+      var t = App.tasks.get(taskID);
+      new App.Views.ParentEditRoutine({ task: t });
     }
 
   });
