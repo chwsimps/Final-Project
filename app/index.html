@@ -99,14 +99,14 @@
       </div>
       <div id="ParentCharts">
         <div id="ParentChartsDisplay">
-          <a class="ParChMP" href="#">
+          <a class="ParChMP" href="#/parent_charts">
             Charts
           </a>
         </div>
       </div>
       <div id="ParentTiming">
         <div id="ParentTimingDisplay">
-          <a class="ParTiMP" href="#">
+          <a class="ParTiMP" href="#/parent_timing">
             Timing
           </a>
         </div>
@@ -155,12 +155,44 @@
     <!-- Parents Rewards Scripts ================================== -->
 
     <script type="text/template" id='parent-rewards'>
-      <div id="name">
-        hey
+      <div id="dailyReward">
+        <p>Daily Reward</p>
+        <select id="daily-reward">
+          <option value="option">1st Reward</option>
+          <option value="option">2nd Reward</option>
+        </select>
+        <button>Add</button>
+      </div>
+      <div id="weeklyReward">
+        <p>Weekly Reward</p>
+        <select id="weekly-reward">
+          <option value="option">1st Reward</option>
+          <option value="option">2nd Reward</option>
+        </select>
+        <button>Add</button>
+      </div>
+      <div id="monthlyReward">
+        <p>Monthly Reward</p>
+        <select id="monthly-reward">
+          <option value="option">1st Reward</option>
+          <option value="option">2nd Reward</option>
+        </select>
+        <button>Add</button>
       </div>
     </script>
 
+    <!-- Parents Charts Scripts ================================== -->
 
+
+
+    <!-- Parents Timing Scripts ================================== -->
+
+    <script type="text/template" id='parent-timing'>
+      <label for=fader>Countdown</label>
+      <input type=range min=0 max=100 value=30 id=fader step=1 onchange="rangevalue.value=value">
+      <output id=rangevalue>30</output>
+      <spanp>Minutes</span>
+    </script>
 
 
     <!-- build:js scripts/vendor.js -->
@@ -192,6 +224,7 @@
     <script src="scripts/views/parent_view_routine.js"></script>
     <script src="scripts/views/parent_view_routine2.js"></script>
     <script src="scripts/views/parent_reward.js"></script>
+    <script src="scripts/views/parent_timing.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
