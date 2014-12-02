@@ -23,11 +23,11 @@
       this.$el.html($('#parent-add-routines').html());
     },
 
-    AddMorningRoutine: function (e) {
+    AddRoutine: function (e, input_id, input_form) {
       e.preventDefault();
 
       var amr = new App.Models.Routine({
-        morning_routine: $('#RoutineMorningInput').val(),
+        morning_routine: $(input_id).val(),
         user: App.user
       });
 
@@ -40,28 +40,15 @@
         }
       });
 
-      $('#AddRoutineLeft')[0].reset();
+      $(input_form)[0].reset();
+    },
 
+    AddMorningRoutine: function (e) {
+      this.AddRoutine(e, '#RoutineMorningInput', '#AddRoutineLeft');
     },
 
     AddNightRoutine: function (e) {
-      e.preventDefault();
-
-      var anr = new App.Models.Routine({
-        night_routine: $('#RoutineNightInput').val(),
-        user: App.user
-      });
-
-      anr.setACL(new Parse.ACL(App.user));
-
-      anr.save(null, {
-        success: function () {
-          App.tasks.add(anr);
-          App.router.navigate('parent_routines', { trigger: true });
-        }
-      });
-
-      $('#AddRoutineRight')[0].reset();
+      this.AddRoutine(e, '#RoutineNightInput', '#AddRoutineRight');
 
     }
 

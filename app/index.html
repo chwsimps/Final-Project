@@ -138,11 +138,6 @@
           <div id="morning_routine_list"><%= morning_routine %></div>
         </a>
       </li>
-      <!--<li class="routines_list_night" id="<%= objectId %>">
-        <a href='#/edit/<%= objectId %>'>
-          <div id="night_routine_list"><%= night_routine %></div>
-        </a>
-      </li>-->
     </script>
     <script type="text/template" id='parent-view-routines2'>
     <li class="routines_list_night" id="<%= objectId %>">
@@ -189,7 +184,7 @@
 
     <script type="text/template" id='parent-timing'>
       <label for=fader>Countdown</label>
-      <input type=range min=0 max=100 value=30 id=fader step=1 onchange="rangevalue.value=value">
+      <input type=range min=0 max=90 value=30 id=fader step=1 onchange="rangevalue.value=value">
       <output id=rangevalue>30</output>
       <spanp>Minutes</span>
     </script>

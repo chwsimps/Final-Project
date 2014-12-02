@@ -8,8 +8,7 @@
       'signup' : 'userSignUp',
       'login' : 'userLogin',
       'parent' : 'parentMain',
-      'parent_routines' : 'AddMorningRoutine',
-      'parent_routines' : 'AddNightRoutine',
+      'parent_routines' : 'AddRoutine',
       'parent_rewards' : 'AddRewards',
       'parent_timing' : 'AddTimeSetUp'
     },
@@ -37,23 +36,16 @@
       new App.Views.ParentHomeView();
     },
 
-    AddMorningRoutine: function () {
+    AddRoutine: function () {
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.ParentAddRoutine();
 
       new App.Views.ParentViewRoutine({ collection: App.tasks });
+      new App.Views.ParentViewRoutine2({ collection: App.tasks });
     },
 
-    AddNightRoutine: function () {
-      if(!App.user) return App.router.navigate('login', { trigger: true});
-
-      new App.Views.ParentAddRoutine();
-
-      new App.Views.ParentViewRoutine({ collection: App.tasks });
-    },
-
-    AddRewards: function () {
+      AddRewards: function () {
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.ParentRewardView();
