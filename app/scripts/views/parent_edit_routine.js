@@ -7,7 +7,8 @@
     className: 'editRoutines',
 
     events: {
-      'submit #edit-morning-list' : 'EditRoutine'
+      'submit #edit-morning-list' : 'EditRoutine',
+      'click #deleteMoTask' : 'DeleteTask'
     },
 
     template: _.template($('#parent-edit-routines').html()),
@@ -34,6 +35,14 @@
       });
 
       this.options.task.save();
+
+      App.router.navigate('parent_routines', { trigger: true});
+    },
+
+    DeleteTask: function(e) {
+      e.preventDefault();
+
+      this.options.task.destroy();
 
       App.router.navigate('parent_routines', { trigger: true});
     }

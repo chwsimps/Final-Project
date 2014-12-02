@@ -7,7 +7,8 @@
     className: 'editRoutinesNight',
 
     events: {
-      'submit #edit-night-list' : 'EditRoutineNight'
+      'submit #edit-night-list' : 'EditRoutineNight',
+      'click #deleteNiTask' : 'DeleteTask'
     },
 
     template: _.template($('#parent-edit-routines-night').html()),
@@ -34,6 +35,14 @@
       });
 
       this.options.task.save();
+
+      App.router.navigate('parent_routines', { trigger: true});
+    },
+
+    DeleteTask: function(e) {
+      e.preventDefault();
+
+      this.options.task.destroy();
 
       App.router.navigate('parent_routines', { trigger: true});
     }
