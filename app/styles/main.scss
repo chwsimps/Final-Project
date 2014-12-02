@@ -112,3 +112,10 @@ body {
 #ParentRoutineNight {
   @include span-columns(6);
 }
+
+#ListSection {
+  @include span-columns(6);
+}
+#ListSection2 {
+  @include span-columns(6);
+}

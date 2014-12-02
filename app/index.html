@@ -54,6 +54,8 @@
       </div> <!--id="MainSection"-->
 
       <div id="ListSection"></div>
+      <div id="ListSection2"></div>
+
 
     </div> <!--class="full"-->
 
@@ -90,7 +92,7 @@
       </div>
       <div id="ParentRewards">
         <div id="ParentRewardsDisplay">
-          <a class="ParReMP" href="#">
+          <a class="ParReMP" href="#/parent_rewards">
             Rewards
           </a>
         </div>
@@ -115,12 +117,14 @@
 
     <script type="text/template" id='parent-add-routines'>
       <div id="ParentRoutineMorning">
+        <h3>Morning Routines</h3>
         <form id="AddRoutineLeft">
           <input type="text" id="RoutineMorningInput" placeholder="Add Routine">
           <button id="AddMorningRoutine">Add</button>
         </form>
       </div>
       <div id="ParentRoutineNight">
+        <h3>Night Routines</h3>
         <form id="AddRoutineRight">
           <input type="text" id="RoutineNightInput" placeholder="Add Routine">
           <button id="AddNightRoutine">Add</button>
@@ -130,16 +134,32 @@
 
     <script type="text/template" id='parent-view-routines'>
       <li class="routines_list_morning" id="<%= objectId %>">
-        <a href='#/read/<%= objectId %>'>
+        <a href='#/edit/<%= objectId %>'>
           <div id="morning_routine_list"><%= morning_routine %></div>
         </a>
       </li>
-      <li class="routines_list_night" id="<%= objectId %>">
+      <!--<li class="routines_list_night" id="<%= objectId %>">
         <a href='#/edit/<%= objectId %>'>
           <div id="night_routine_list"><%= night_routine %></div>
         </a>
-      </li>
+      </li>-->
     </script>
+    <script type="text/template" id='parent-view-routines2'>
+    <li class="routines_list_night" id="<%= objectId %>">
+      <a href='#/edit/<%= objectId %>'>
+        <div id="night_routine_list"><%= night_routine %></div>
+      </a>
+    </li>
+    </script>
+
+    <!-- Parents Rewards Scripts ================================== -->
+
+    <script type="text/template" id='parent-rewards'>
+      <div id="name">
+        hey
+      </div>
+    </script>
+
 
 
 
@@ -170,6 +190,8 @@
     <script src="scripts/views/parent_home_view.js"></script>
     <script src="scripts/views/parent_add_routine.js"></script>
     <script src="scripts/views/parent_view_routine.js"></script>
+    <script src="scripts/views/parent_view_routine2.js"></script>
+    <script src="scripts/views/parent_reward.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
