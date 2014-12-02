@@ -135,7 +135,7 @@
     <script type="text/template" id='parent-view-routines'>
       <% if (time_of_day === "morning") { %>
       <li class="routines_list_morning" id="<%= objectId %>">
-        <a href='#/edit/<%= objectId %>'>
+        <a href='#/edit_morning/<%= objectId %>'>
           <div id="morning_routine_list"><%= routine %></div>
         </a>
       </li>
@@ -145,7 +145,7 @@
     <script type="text/template" id='parent-view-routines-night'>
       <% if (time_of_day === "night") { %>
       <li class="routines_list_night" id="<%= objectId %>">
-        <a href='#/edit/<%= objectId %>'>
+        <a href='#/edit_night/<%= objectId %>'>
           <div id="night_routine_list"><%= routine %></div>
         </a>
       </li>
@@ -156,6 +156,16 @@
       <li class="routines_list_morning" id="<%= objectId %>">
         <form id="edit-morning-list">
           <input type="text" value="<%= routine %>" id="edit_moro">
+          <button>Update</button>
+          <button>Delete</button>
+        </form>
+      </li>
+    </script>
+
+    <script type="text/template" id='parent-edit-routines-night'>
+      <li class="routines_list_night" id="<%= objectId %>">
+        <form id="edit-night-list">
+          <input type="text" value="<%= routine %>" id="edit_moni">
           <button>Update</button>
           <button>Delete</button>
         </form>
@@ -234,6 +244,7 @@
     <script src="scripts/views/parent_view_routine.js"></script>
     <script src="scripts/views/parent_view_routine_night.js"></script>
     <script src="scripts/views/parent_edit_routine.js"></script>
+    <script src="scripts/views/parent_edit_routine_night.js"></script>
     <script src="scripts/views/parent_reward.js"></script>
     <script src="scripts/views/parent_timing.js"></script>
     <script src="scripts/main.js"></script>

@@ -11,7 +11,8 @@
       'parent_routines' : 'AddRoutine',
       'parent_rewards' : 'AddRewards',
       'parent_timing' : 'AddTimeSetUp',
-      'edit/:taskID' : 'EditRoutine'
+      'edit_morning/:taskID' : 'EditRoutine',
+      'edit_night/:taskID' : 'EditRoutineNight'
     },
 
     home: function (){
@@ -63,6 +64,13 @@
 
       var t = App.tasks.get(taskID);
       new App.Views.ParentEditRoutine({ task: t });
+    },
+
+    EditRoutineNight: function (taskID) {
+      if(!App.user) return App.router.navigate('login', { trigger: true});
+
+      var t = App.tasks.get(taskID);
+      new App.Views.ParentEditRoutineNight({ task: t });
     }
 
   });
