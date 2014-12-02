@@ -6,8 +6,8 @@
     idAttribute: 'objectId',
 
     defaults: {
-      morning_routine: '',
-      night_routine: '',
+      time_of_day: '',
+      routine: '',
       reward_daily: '',
       reward_weekly: '',
       reward_monthly: '',
