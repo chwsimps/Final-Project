@@ -224,10 +224,13 @@
     </script>
 
     <script type="text/template" id='kid-morning-routines1'>
-      <h3><%= routine %></h3>
-      <a href="#/morning_routines2">
-        <button name="button">NEXT</button>
-      </a>
+      <% if (time_of_day === "morning") { %>
+      <div class="kid_morning_routines" id="<%= objectId %>">
+        <h3><%= routine %></h3>
+        <a href="#/morning_routines2">
+          <button name="button">NEXT</button>
+      </div>
+      <% } %>
     </script>
 
 
@@ -265,6 +268,7 @@
     <script src="scripts/views/parent_reward.js"></script>
     <script src="scripts/views/parent_timing.js"></script>
     <script src="scripts/views/kid_morning_routine.js"></script>
+    <script src="scripts/views/kid_morning_routine1.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
