@@ -61,6 +61,7 @@
       new App.Views.ParentAddTime();
 
       new App.Views.ParentTimeView({ collection: App.tasks });
+      new App.Views.ParentTimeViewNight({ collection: App.tasks });
     },
 
     EditRoutine: function (taskID) {

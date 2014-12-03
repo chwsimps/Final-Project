@@ -226,11 +226,21 @@
 
     <script type="text/template" id='parent-view-time'>
       <% if (time_of_day === "morning") { %>
-      <li class="routines_time_morning" id="<%= objectId %>">
+      <div class="routines_time_morning" id="<%= objectId %>">
         <a href='#/edit_morning/<%= objectId %>'>
           <div id="morning_time_list"><%= timing %></div>
         </a>
-      </li>
+      </div>
+      <% } %>
+    </script>
+
+    <script type="text/template" id='parent-view-time-night'>
+      <% if (time_of_day === "night") { %>
+      <div class="routines_time_night" id="<%= objectId %>">
+        <a href='#/edit_night/<%= objectId %>'>
+          <div id="night_time_list"><%= timing %></div>
+        </a>
+      </div>
       <% } %>
     </script>
 
@@ -284,6 +294,7 @@
     <script src="scripts/views/parent_reward.js"></script>
     <script src="scripts/views/parent_add_time.js"></script>
     <script src="scripts/views/parent_timing_view.js"></script>
+    <script src="scripts/views/parent_timing_view_night.js"></script>
     <script src="scripts/views/kid_morning_routine.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

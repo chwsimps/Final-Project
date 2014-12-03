@@ -1,12 +1,12 @@
 (function () {
 
-  App.Views.ParentTimeView = Parse.View.extend({
+  App.Views.ParentTimeViewNight = Parse.View.extend({
 
-    className: 'ParentViewTime',
+    className: 'ParentViewTime2',
 
     events: {},
 
-    template: _.template($('#parent-view-time').html()),
+    template: _.template($('#parent-view-time-night').html()),
 
     initialize: function (options) {
       this.options = options;
@@ -14,7 +14,7 @@
       // this.collection.off();
       this.collection.on('sync', this.timeQuery, this);
 
-      $('#ListSection').html(this.$el);
+      $('#ListSection2').html(this.$el);
 
       this.timeQuery();
     },
