@@ -79,12 +79,6 @@
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.KidMorningRoutine();
-    },
-
-    RunMorningRoutines1: function () {
-      if(!App.user) return App.router.navigate('login', { trigger: true});
-
-      new App.Views.KidMorningRoutine1();
     }
 
   });

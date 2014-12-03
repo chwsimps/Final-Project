@@ -216,21 +216,16 @@
 
     <!-- Kids Morning Routines Scripts =========================== -->
 
-    <script type="text/template" id='kid-morning-routines'>
+    <script type="text/template" id='start-routines'>
       <h3>Start Morning Routines</h3>
-      <a href="#/morning_routines1">
-        <button name="button">START!</button>
-      </a>
+      <button class="start-button">START!</button>
     </script>
 
-    <script type="text/template" id='kid-morning-routines1'>
-      <% if (time_of_day === "morning") { %>
+    <script type="text/template" id='next-routine'>
       <div class="kid_morning_routines" id="<%= objectId %>">
         <h3><%= routine %></h3>
-        <a href="#/morning_routines2">
-          <button name="button">NEXT</button>
+        <button class="next-button">NEXT</button>
       </div>
-      <% } %>
     </script>
 
 
@@ -268,7 +263,6 @@
     <script src="scripts/views/parent_reward.js"></script>
     <script src="scripts/views/parent_timing.js"></script>
     <script src="scripts/views/kid_morning_routine.js"></script>
-    <script src="scripts/views/kid_morning_routine1.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
