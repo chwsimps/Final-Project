@@ -5,8 +5,8 @@ App.Views.ParentAddRoutine = Parse.View.extend({
     className: 'ParentAddRoutines',
 
     events: {
-      'click #AddMorningRoutine' : 'AddMorningRoutine',
-      'click #AddNightRoutine' : 'AddNightRoutine'
+      'submit #AddRoutineLeft' : 'AddMorningRoutine',
+      'submit #AddRoutineRight' : 'AddNightRoutine'
     },
 
     template: _.template($('#parent-add-routines').html()),
@@ -37,11 +37,13 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       ar.save(null, {
         success: function () {
           App.tasks.add(ar);
-          App.router.navigate('parent_routines', { trigger: true });
+          App.router.navigate('parent_routines', { trigger: true, replace: true });
         }
       });
 
       $(input_form)[0].reset();
+
+      location.reload();
     },
 
     AddMorningRoutine: function (e) {

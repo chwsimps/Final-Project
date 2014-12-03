@@ -13,7 +13,7 @@
     initialize: function (options) {
       this.options = options;
 
-      this.collection.off();
+      // this.collection.off();
       this.collection.on('sync', this.taskQuery, this);
 
       $('#ListSection2').html(this.$el);
