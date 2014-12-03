@@ -214,6 +214,23 @@
       <spanp>Minutes</span>
     </script>
 
+    <!-- Kids Morning Routines Scripts =========================== -->
+
+    <script type="text/template" id='kid-morning-routines'>
+      <h3>Start Morning Routines</h3>
+      <a href="#/morning_routines1">
+        <button name="button">START!</button>
+      </a>
+    </script>
+
+    <script type="text/template" id='kid-morning-routines1'>
+      <h3><%= routine %></h3>
+      <a href="#/morning_routines2">
+        <button name="button">NEXT</button>
+      </a>
+    </script>
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -247,6 +264,7 @@
     <script src="scripts/views/parent_edit_routine_night.js"></script>
     <script src="scripts/views/parent_reward.js"></script>
     <script src="scripts/views/parent_timing.js"></script>
+    <script src="scripts/views/kid_morning_routine.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
