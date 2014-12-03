@@ -80,7 +80,7 @@
       </form>
     </script>
 
-    <!-- Parents View Scripts ================================== -->
+    <!-- Parents Main View Scripts ================================== -->
 
     <script type="text/template" id='parent-mainPage'>
       <div id="ParentRoutines">
@@ -208,10 +208,30 @@
     <!-- Parents Timing Scripts ================================== -->
 
     <script type="text/template" id='parent-timing'>
-      <label for=fader>Countdown</label>
-      <input type=range min=0 max=90 value=30 id=fader step=1 onchange="rangevalue.value=value">
-      <output id=rangevalue>30</output>
-      <spanp>Minutes</span>
+      <div id="MorningCountdown">
+        <h3>Morning Countdown Timer</h3>
+        <form id="AddTimeLeft">
+          <input type="number" id="TimingMorningInput" placeholder="Add Morning Countdown Timer" required>
+          <button id="AddMorningTime">Lock Time In</button>
+        </form>
+      </div>
+      <div id="NightCountdown">
+        <h3>Bedtime Countdown Timer</h3>
+        <form id="AddTimeRight">
+          <input type="number" id="TimingNightInput" placeholder="Add Bedtime Countdown Timer" required>
+          <button id="AddNightTime">Lock Time In</button>
+        </form>
+      </div>
+    </script>
+
+    <script type="text/template" id='parent-view-time'>
+      <% if (time_of_day === "morning") { %>
+      <li class="routines_time_morning" id="<%= objectId %>">
+        <a href='#/edit_morning/<%= objectId %>'>
+          <div id="morning_time_list"><%= timing %></div>
+        </a>
+      </li>
+      <% } %>
     </script>
 
     <!-- Kids Morning Routines Scripts =========================== -->
@@ -249,6 +269,7 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/models/routine_model.js"></script>
+    <script src="scripts/models/timing_model.js"></script>
     <script src="scripts/collections/routine_collection.js"></script>
     <script src="scripts/routes/app_router.js"></script>
     <script src="scripts/views/login_view.js"></script>
@@ -261,7 +282,8 @@
     <script src="scripts/views/parent_edit_routine.js"></script>
     <script src="scripts/views/parent_edit_routine_night.js"></script>
     <script src="scripts/views/parent_reward.js"></script>
-    <script src="scripts/views/parent_timing.js"></script>
+    <script src="scripts/views/parent_add_time.js"></script>
+    <script src="scripts/views/parent_timing_view.js"></script>
     <script src="scripts/views/kid_morning_routine.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

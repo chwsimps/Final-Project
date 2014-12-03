@@ -37,7 +37,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       ar.save(null, {
         success: function () {
           App.tasks.add(ar);
-          App.router.navigate('parent_routines', { trigger: true, replace: true });
+          App.router.navigate('parent_routines', { trigger: true });
         }
       });
 

@@ -58,7 +58,9 @@
     AddTimeSetUp: function () {
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
-      new App.Views.ParentTimingView();
+      new App.Views.ParentAddTime();
+
+      new App.Views.ParentTimeView({ collection: App.tasks });
     },
 
     EditRoutine: function (taskID) {

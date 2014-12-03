@@ -119,3 +119,13 @@ body {
 #ListSection2 {
   @include span-columns(6);
 }
+
+// Parent Timing Page
+
+#MorningCountdown {
+  @include span-columns(6);
+}
+
+#NightCountdown {
+  @include span-columns(6);
+}
