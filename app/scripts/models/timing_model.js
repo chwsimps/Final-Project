@@ -1,6 +1,6 @@
 (function () {
 
-  App.Models.Routine = Parse.Object.extend({
+  App.Models.Time = Parse.Object.extend({
 
     className: 'Countdown',
     idAttribute: 'objectId',

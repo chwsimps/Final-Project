@@ -22,12 +22,13 @@
       this.$el.empty();
 
       this.$el.html($('#parent-timing').html());
+
     },
 
     AddTime: function (e, input_id, input_form, tod) {
       e.preventDefault();
 
-      at = new App.Models.Routine({
+      at = new App.Models.Time({
         timing: $(input_id).val(),
         time_of_day: tod,
         user: App.user

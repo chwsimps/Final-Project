@@ -24,7 +24,7 @@
     timeQuery: function () {
       var self = this;
 
-      var time_list = new Parse.Query(App.Models.Routine);
+      var time_list = new Parse.Query(App.Models.Time);
       time_list.equalTo('user', App.user);
       time_list.ascending('createdAt');
       time_list.limit({
