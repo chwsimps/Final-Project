@@ -26,6 +26,8 @@
 
       var task_list = new Parse.Query(App.Models.Routine);
       task_list.equalTo('user', App.user);
+      task_list.ascending('createdAt');
+
       task_list.find({
         success: function(results) {
           self.collection = results;
