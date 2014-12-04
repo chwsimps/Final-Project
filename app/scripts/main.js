@@ -37,4 +37,9 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
   };
   App.updateUser();
 
+    var clock = jQuery('.your-clock').FlipClock(3000, {
+  		countdown: true,
+  		clockFace: 'MinuteCounter'
+  	});
+
 }());
