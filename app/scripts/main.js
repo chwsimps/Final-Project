@@ -4,12 +4,19 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
 
   //instance of collection
   App.tasks = new App.Collections.Routines();
+  App.times = new App.Collections.Times();
 
   //server fetch
   App.tasks.fetch().done( function (){
 
     App.router = new App.Routers.AppRouter();
     Parse.history.start();
+
+  });
+
+  App.times.fetch().done( function (){
+
+    App.router = new App.Routers.AppRouter();
 
   });
 

@@ -22,15 +22,15 @@
 
       $('#MainSection').html(this.$el);
 
-      var morning_time = new Parse.Query(App.Models.Time);
-        morning_time.equalTo('user', App.user);
-        morning_time.equalTo('time_of_day', 'morning');
+      // var morning_time = new Parse.Query(App.Models.Time);
+      //   morning_time.equalTo('user', App.user);
+      //   morning_time.equalTo('time_of_day', 'morning');
 
-      // morning_time = _.sortBy(this.collection, function (model) {
-      //   return parseInt(model.test2);
-      // });
+      morning_time = _.sortBy(this.collection.models, function (model) {
+        return parseInt(model.attributes.timing);
+      });
 
-      morning_time = 03;
+      // morning_time = 03;
 
       $(".start-button").click(function(){
         console.log(morning_time);
@@ -39,7 +39,7 @@
           clockFace: 'MinuteCounter',
           callbacks: {
             stop: function() {
-              alert("Sorry! Time's Up!");
+              alert("Time's Up! You'll Do It Next Time");
               $('.your-clock').empty();
               App.router.navigate('parent', { trigger: true });
             }
