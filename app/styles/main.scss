@@ -129,3 +129,9 @@ body {
 #NightCountdown {
   @include span-columns(6);
 }
+
+.your-clock {
+  display: inline-block;
+  width: 28%;
+  margin-left: 35.75%;
+}
