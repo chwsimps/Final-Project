@@ -21,6 +21,14 @@
       this.render_start();
 
       $('#MainSection').html(this.$el);
+
+      $(".start-button").click(function(){
+        var clock = jQuery('.your-clock').FlipClock(3000, {
+          countdown: true,
+          clockFace: 'MinuteCounter'
+        });
+      });
+
     },
 
     startChores: function (e) {
