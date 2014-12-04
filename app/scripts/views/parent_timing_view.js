@@ -24,15 +24,6 @@
 
       var time_list = new Parse.Query(App.Models.Time);
       time_list.equalTo('user', App.user);
-      time_list.ascending('createdAt');
-      time_list.limit({
-        success: function () {
-
-        },
-        error: function(error) {
-          alert("Error: " + error.message);
-        }
-      });
 
       time_list.find({
         success: function(results) {

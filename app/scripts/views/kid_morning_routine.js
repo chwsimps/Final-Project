@@ -22,10 +22,28 @@
 
       $('#MainSection').html(this.$el);
 
+      var morning_time = new Parse.Query(App.Models.Time);
+        morning_time.equalTo('user', App.user);
+        morning_time.equalTo('time_of_day', 'morning');
+
+      // morning_time = _.sortBy(this.collection, function (model) {
+      //   return parseInt(model.test2);
+      // });
+
+      morning_time = 03;
+
       $(".start-button").click(function(){
-        var clock = jQuery('.your-clock').FlipClock(3000, {
+        console.log(morning_time);
+        var clock = $('.your-clock').FlipClock(morning_time, {
           countdown: true,
-          clockFace: 'MinuteCounter'
+          clockFace: 'MinuteCounter',
+          callbacks: {
+            stop: function() {
+              alert("Sorry! Time's Up!");
+              $('.your-clock').empty();
+              App.router.navigate('parent', { trigger: true });
+            }
+          }
         });
       });
 

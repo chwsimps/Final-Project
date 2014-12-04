@@ -19,6 +19,7 @@
     render: function () {
       $('#ListSection').empty();
       $('#ListSection2').empty();
+      $('.your-clock').empty();
       this.$el.html(this.template);
     }
 
