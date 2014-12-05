@@ -8,7 +8,6 @@
     defaults: {
       time_of_day: '',
       timing: 0,
-      complete: true,
       user: ''
     },
 

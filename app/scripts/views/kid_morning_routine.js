@@ -42,30 +42,6 @@
 
     },
 
-    startChores: function (e) {
-      e.preventDefault();
-
-      // Change view's template to routine template.
-      this.template = _.template($('#next-routine').html());
-      // Re-render the view.
-      this.render_routine();
-    },
-
-    nextChore: function (e) {
-      e.preventDefault();
-
-      // Incrementing (bump) this.routine.
-      this.routine = this.routine + 1;
-      // Check if all routines are done. If this.routine == collection.length.
-      if(this.routine === this.collection.length) {
-        App.router.navigate('routine_board', { trigger: true });
-      } else {
-        this.render_routine();
-      }
-      // If they are all done -> // Navigate/Redirect to "routine board" view.
-      // Else -> // Re-render.
-    },
-
     taskQuery: function () {
       var self = this;
 
@@ -98,19 +74,30 @@
       var chore = this.collection[this.routine].toJSON();
       this.$el.html(this.template(chore));
 
-      // console.log(chore.routine);
+    },
 
-        // var clock = $('.your-clock').FlipClock(chore.timing, {
-        //   countdown: true,
-        //   clockFace: 'MinuteCounter',
-        //   callbacks: {
-        //     stop: function() {
-        //       alert("Time's Up! You'll Do It Next Time");
-        //       $('.your-clock').empty();
-        //       App.router.navigate('parent', { trigger: true });
-        //     }
-        //   }
-        // });
+    startChores: function (e) {
+      e.preventDefault();
+
+      // Change view's template to routine template.
+      this.template = _.template($('#next-routine').html());
+      // Re-render the view.
+      this.render_routine();
+    },
+
+    nextChore: function (e) {
+      e.preventDefault();
+
+      // Incrementing (bump) this.routine.
+      this.routine = this.routine + 1;
+      // Check if all routines are done. If this.routine == collection.length.
+      if(this.routine === this.collection.length) {
+        App.router.navigate('routine_board', { trigger: true });
+      } else {
+        this.render_routine();
+      }
+      // If they are all done -> // Navigate/Redirect to "routine board" view.
+      // Else -> // Re-render.
     }
 
   });

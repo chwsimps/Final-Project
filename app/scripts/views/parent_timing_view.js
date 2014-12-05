@@ -11,8 +11,14 @@
     initialize: function (options) {
       this.options = options;
 
-      // this.collection.off();
-      this.collection.on('sync', this.timeQuery, this);
+      // Query Parse for App.Models.Time equalTo currentUser
+      // Maybe set this.morning_timer and this.night_timer to keep the data
+      // easily available.
+
+      // If a timer is present:
+      //   Render a "locked in" template
+      // Else:
+      //   Render the current "AddTime" template
 
       $('#ListSection').html(this.$el);
 

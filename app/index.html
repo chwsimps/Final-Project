@@ -185,16 +185,16 @@
       <div id="MorningCountdown">
         <h3>Morning Countdown Timer</h3>
         <form id="AddTimeLeft">
-          <span class="highlight"></span><output id="rangevalue">50</output><span> Minutes</span>
-          <input class="bar" type="range" min="0" max="90" step="1" value="50" id="TimingMorningInput" onchange="rangevalue.value=value"/>
+          <span class="highlight"></span><output id="rangevalue">45</output><span> Minutes</span>
+          <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingMorningInput" onchange="rangevalue.value=value"/>
           <button id="AddMorningTime">Lock Time In</button>
         </form>
       </div>
       <div id="NightCountdown">
         <h3>Bedtime Countdown Timer</h3>
         <form id="AddTimeRight">
-          <span class="highlight"></span><output id="rangevalue">50</output><span> Minutes</span>
-          <input class="bar" type="range" min="0" max="90" step="1" value="50" id="TimingNightInput" onchange="rangevalue.value=value"/>
+          <span class="highlight"></span><output id="rangevalue">45</output><span> Minutes</span>
+          <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingNightInput" onchange="rangevalue.value=value"/>
           <button id="AddNightTime">Lock Time In</button>
         </form>
       </div>
@@ -218,6 +218,16 @@
         </a>
       </div>
       <% } %>
+    </script>
+
+    <script type="text/template" id='parent-edit-time'>
+      <div class="routines_time_morning" id="<%= objectId %>">
+        <form id="edit-time">
+          <span class="highlight"></span><output id="rangevalue">50</output><span> Minutes</span>
+          <input class="bar" type="range" min="0" max="90" step="1" value="<%= timing %>" id="TimingMorningInput" onchange="rangevalue.value=value"/>
+          <button>Update</button>
+        </form>
+      </div>
     </script>
 
     <!-- Parents Rewards Scripts ================================== -->

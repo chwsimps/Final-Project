@@ -16,37 +16,35 @@
 
       $('#MainSection').html(this.$el);
 
-      // $('#AddTimeLeft').on('submit', function (e) {
-      //   e.preventDefault();
-      //
-      //   $('#TimingMorningInput').hide();
-      //   $('#AddMorningTime').text('Locked In');
-      // });
     },
 
     render: function () {
       this.$el.empty();
 
-      this.$el.html($('#parent-timing').html());
+      this.$el.html(this.template);
 
     },
 
-    AddTime: function (e, input_id, input_form, tod, clicked) {
+    AddTime: function (e, input_id, input_form, tod) {
       e.preventDefault();
 
       at = new App.Models.Time({
         timing: parseInt($(input_id).val()*60),
         time_of_day: tod,
-        complete: clicked,
         user: App.user
       });
+
+      $(input_id).hide();
 
       at.setACL(new Parse.ACL(App.user));
 
       at.save(null, {
         success: function () {
-          App.tasks.add(at);
+          App.times.add(at);
           App.router.navigate('parent_timing', { trigger: true });
+        },
+        error: function (obj, e) {
+          console.log('Shit went wrong! ' + e.message);
         }
       });
 
@@ -57,21 +55,12 @@
 
     AddMorningTime: function (e) {
       this.AddTime(e, '#TimingMorningInput', '#AddTimeLeft', 'morning');
-
-      // if(complete == true) {
-      //   $('#AddTimeLeft').on('submit', function (e) {
-      //     e.preventDefault();
-      //
-      //     $('#TimingMorningInput').hide();
-      //     $('#AddMorningTime').text('Locked In');
-      //   });
-      // } else {
-      //
-      // }
+      $('#AddMorningTime').text('Locked In');
     },
 
     AddNightTime: function (e) {
       this.AddTime(e, '#TimingNightInput', '#AddTimeRight', 'night');
+      $('#AddNightTime').text('Locked In');
     }
 
   });
