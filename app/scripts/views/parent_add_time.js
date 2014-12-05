@@ -29,7 +29,7 @@
       e.preventDefault();
 
       at = new App.Models.Time({
-        timing: $(input_id).val(),
+        timing: parseInt($(input_id).val()),
         time_of_day: tod,
         user: App.user
       });

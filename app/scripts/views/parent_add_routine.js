@@ -28,9 +28,12 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       ar = new App.Models.Routine({
         routine: $(input_id).val(),
+        // timing: parseInt($(timing_id).val()),
         time_of_day: tod,
         user: App.user
       });
+
+      console.log(ar);
 
       ar.setACL(new Parse.ACL(App.user));
 
@@ -38,12 +41,15 @@ App.Views.ParentAddRoutine = Parse.View.extend({
         success: function () {
           App.tasks.add(ar);
           App.router.navigate('parent_routines', { trigger: true });
+        },
+        error: function (obj, e) {
+          console.log('stuff blew up! ' + e.message);
         }
       });
 
       $(input_form)[0].reset();
 
-      location.reload();
+      // location.reload();
     },
 
     AddMorningRoutine: function (e) {

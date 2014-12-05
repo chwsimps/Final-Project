@@ -7,7 +7,7 @@
 
     defaults: {
       time_of_day: '',
-      timing: '',
+      timing: 0,
       user: ''
     },
 

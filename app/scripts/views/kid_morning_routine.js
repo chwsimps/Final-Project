@@ -22,19 +22,12 @@
 
       $('#MainSection').html(this.$el);
 
-      // var morning_time = new Parse.Query(App.Models.Time);
-      //   morning_time.equalTo('user', App.user);
-      //   morning_time.equalTo('time_of_day', 'morning');
+      var timer = this.collection.toJSON();
+      this.$el.html(this.template(timer));
 
-      morning_time = _.sortBy(this.collection.models, function (model) {
-        return parseInt(model.attributes.timing);
-      });
-
-      // morning_time = 03;
-
-      $(".start-button").click(function(){
-        console.log(morning_time);
-        var clock = $('.your-clock').FlipClock(morning_time, {
+      $('.start-button').click(function () {
+        console.log(timer)
+        var clock = $('.your-clock').FlipClock(100, {
           countdown: true,
           clockFace: 'MinuteCounter',
           callbacks: {
@@ -83,7 +76,7 @@
 
       task_list.find({
         success: function(results) {
-          console.log(results);
+          // console.log(results);
           self.collection = results;
         }
       });
@@ -104,6 +97,20 @@
 
       var chore = this.collection[this.routine].toJSON();
       this.$el.html(this.template(chore));
+
+      // console.log(chore.routine);
+
+        // var clock = $('.your-clock').FlipClock(chore.timing, {
+        //   countdown: true,
+        //   clockFace: 'MinuteCounter',
+        //   callbacks: {
+        //     stop: function() {
+        //       alert("Time's Up! You'll Do It Next Time");
+        //       $('.your-clock').empty();
+        //       App.router.navigate('parent', { trigger: true });
+        //     }
+        //   }
+        // });
     }
 
   });
