@@ -16,6 +16,12 @@
 
       $('#MainSection').html(this.$el);
 
+      $('#AddTimeLeft').on('submit', function (e) {
+        e.preventDefault();
+
+        $('#TimingMorningInput').hide();
+        $('#AddMorningTime').text('Locked In');
+      });
     },
 
     render: function () {
@@ -43,13 +49,14 @@
         }
       });
 
-      $(input_form)[0].reset();
-
-      location.reload();
+      // $(input_form)[0].reset();
+      //
+      // location.reload();
     },
 
     AddMorningTime: function (e) {
       this.AddTime(e, '#TimingMorningInput', '#AddTimeLeft', 'morning');
+
     },
 
     AddNightTime: function (e) {

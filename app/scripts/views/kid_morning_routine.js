@@ -22,11 +22,11 @@
 
       $('#MainSection').html(this.$el);
 
-      var timer = this.collection.toJSON();
-      this.$el.html(this.template(timer));
+      // var timer = this.collection.toJSON();
+      // this.$el.html(this.template(timer));
 
       $('.start-button').click(function () {
-        console.log(timer)
+        console.log(collection)
         var clock = $('.your-clock').FlipClock(100, {
           countdown: true,
           clockFace: 'MinuteCounter',
