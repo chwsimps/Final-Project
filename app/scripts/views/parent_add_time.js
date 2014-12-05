@@ -35,7 +35,7 @@
       e.preventDefault();
 
       at = new App.Models.Time({
-        timing: parseInt($(input_id).val()),
+        timing: parseInt($(input_id).val()*60),
         time_of_day: tod,
         complete: clicked,
         user: App.user
@@ -50,7 +50,7 @@
         }
       });
 
-      // $(input_form)[0].reset();
+      $(input_form)[0].reset();
       //
       // location.reload();
 

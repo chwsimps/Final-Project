@@ -45,4 +45,8 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
   App.updateUser();
 
 
+  function show_value2(x) {
+    document.getElementById("slider_value2").innerHTML=x;
+  }
+
 }());
