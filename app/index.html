@@ -185,14 +185,16 @@
       <div id="MorningCountdown">
         <h3>Morning Countdown Timer</h3>
         <form id="AddTimeLeft">
-          <input type="range" min="0" max="90" id="TimingMorningInput" placeholder="Add Morning Countdown Timer" required>
+          <input id="invis_input" type="text" name="amountInput" value="45" oninput="this.form.amountRange.value=this.value" />
+          <input type="range" min="0" max="90" step="1" id="TimingMorningInput" oninput="this.form.amountInput.value=this.value" />
           <button id="AddMorningTime">Lock Time In</button>
         </form>
       </div>
       <div id="NightCountdown">
         <h3>Bedtime Countdown Timer</h3>
         <form id="AddTimeRight">
-          <input type="range" min="0" max="90" id="TimingNightInput" placeholder="Add Bedtime Countdown Timer" required>
+          <input id="invis_input" type="text" name="amountInput" value="45" oninput="this.form.amountRange.value=this.value" />
+          <input type="range" min="0" max="90" step="1" id="TimingNightInput" oninput="this.form.amountInput.value=this.value" />
           <button id="AddNightTime">Lock Time In</button>
         </form>
       </div>

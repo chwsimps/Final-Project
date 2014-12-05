@@ -50,9 +50,12 @@
         }
       });
 
-      $(input_form)[0].reset();
       //
       // location.reload();
+
+      $("#TimingMorningInput", "#TimingNightInput").mousemove( function(e){
+        $("#valBox").html($(this).val());
+      });
 
     },
 
