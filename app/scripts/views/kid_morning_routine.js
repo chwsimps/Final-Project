@@ -22,12 +22,12 @@
 
       $('#MainSection').html(this.$el);
 
-      // var timer = this.collection.toJSON();
-      // this.$el.html(this.template(timer));
+      var timer = this.collection.toJSON();
+      this.$el.html(this.template(timer));
 
       $('.start-button').click(function () {
-        console.log(collection)
-        var clock = $('.your-clock').FlipClock(100, {
+        console.log(timer[0].timing);
+        var clock = $('.your-clock').FlipClock(timer[0].timing, {
           countdown: true,
           clockFace: 'MinuteCounter',
           callbacks: {
@@ -58,7 +58,7 @@
       this.routine = this.routine + 1;
       // Check if all routines are done. If this.routine == collection.length.
       if(this.routine === this.collection.length) {
-        App.router.navigate('', { trigger: true });
+        App.router.navigate('routine_board', { trigger: true });
       } else {
         this.render_routine();
       }

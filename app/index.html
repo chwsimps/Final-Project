@@ -27,7 +27,7 @@
     <div class="full">
 
       <div class="UserHeader">
-        <span id="loggedIn"></span><button id="logOut">Logout</button>
+        <span id="loggedIn"></span><button id="logOut"></button>
         <a href="#/parent"><button id="ParentViewBtn">Parent View</button></a>
       </div>
 
@@ -95,6 +95,13 @@
           </a>
         </div>
       </div>
+      <div id="ParentTiming">
+        <div id="ParentTimingDisplay">
+          <a class="ParTiMP" href="#/parent_timing">
+            Timing
+          </a>
+        </div>
+      </div>
       <div id="ParentRewards">
         <div id="ParentRewardsDisplay">
           <a class="ParReMP" href="#/parent_rewards">
@@ -106,13 +113,6 @@
         <div id="ParentChartsDisplay">
           <a class="ParChMP" href="#/parent_charts">
             Charts
-          </a>
-        </div>
-      </div>
-      <div id="ParentTiming">
-        <div id="ParentTimingDisplay">
-          <a class="ParTiMP" href="#/parent_timing">
-            Timing
           </a>
         </div>
       </div>
@@ -179,39 +179,6 @@
       </li>
     </script>
 
-    <!-- Parents Rewards Scripts ================================== -->
-
-    <script type="text/template" id='parent-rewards'>
-      <div id="dailyReward">
-        <p>Daily Reward</p>
-        <select id="daily-reward">
-          <option value="option">1st Reward</option>
-          <option value="option">2nd Reward</option>
-        </select>
-        <button>Add</button>
-      </div>
-      <div id="weeklyReward">
-        <p>Weekly Reward</p>
-        <select id="weekly-reward">
-          <option value="option">1st Reward</option>
-          <option value="option">2nd Reward</option>
-        </select>
-        <button>Add</button>
-      </div>
-      <div id="monthlyReward">
-        <p>Monthly Reward</p>
-        <select id="monthly-reward">
-          <option value="option">1st Reward</option>
-          <option value="option">2nd Reward</option>
-        </select>
-        <button>Add</button>
-      </div>
-    </script>
-
-    <!-- Parents Charts Scripts ================================== -->
-
-
-
     <!-- Parents Timing Scripts ================================== -->
 
     <script type="text/template" id='parent-timing'>
@@ -250,6 +217,38 @@
       </div>
       <% } %>
     </script>
+
+    <!-- Parents Rewards Scripts ================================== -->
+
+    <script type="text/template" id='parent-rewards'>
+      <div id="dailyReward">
+        <p>Daily Reward</p>
+        <select id="daily-reward">
+          <option value="option">1st Reward</option>
+          <option value="option">2nd Reward</option>
+        </select>
+        <button>Add</button>
+      </div>
+      <div id="weeklyReward">
+        <p>Weekly Reward</p>
+        <select id="weekly-reward">
+          <option value="option">1st Reward</option>
+          <option value="option">2nd Reward</option>
+        </select>
+        <button>Add</button>
+      </div>
+      <div id="monthlyReward">
+        <p>Monthly Reward</p>
+        <select id="monthly-reward">
+          <option value="option">1st Reward</option>
+          <option value="option">2nd Reward</option>
+        </select>
+        <button>Add</button>
+      </div>
+    </script>
+
+    <!-- Parents Charts Scripts ================================== -->
+
 
     <!-- Kids Morning Routines Scripts =========================== -->
 
