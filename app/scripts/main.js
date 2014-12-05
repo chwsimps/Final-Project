@@ -45,12 +45,4 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
   App.updateUser();
 
 
-  // $("#TimingMorningInput").mousemove( function(e){
-  //   $("#valBox").html($(this).val());
-  // });
-
-  // $("#TimingMorningInput").change( function(e){
-  //   $("#valBox").html($(this).val());
-  // });
-
 }());

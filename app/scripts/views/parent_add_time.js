@@ -53,10 +53,6 @@
       //
       // location.reload();
 
-      $("#TimingMorningInput", "#TimingNightInput").mousemove( function(e){
-        $("#valBox").html($(this).val());
-      });
-
     },
 
     AddMorningTime: function (e) {
