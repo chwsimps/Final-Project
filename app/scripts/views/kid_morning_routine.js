@@ -34,7 +34,7 @@
             stop: function() {
               alert("Time's Up! You'll Do It Next Time");
               $('.your-clock').empty();
-              App.router.navigate('parent', { trigger: true });
+              App.router.navigate('routine_board', { trigger: true });
             }
           }
         });

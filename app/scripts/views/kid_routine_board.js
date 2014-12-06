@@ -1,12 +1,14 @@
 (function () {
 
-  App.Views.ParentHomeView = Parse.View.extend({
+  App.Views.KidRoutineBoard = Parse.View.extend({
 
-    className: 'ParentHome',
+    // tagName: 'ul'
+
+    className: 'KidsRoutineBoard',
 
     events: {},
 
-    template: _.template($('#parent-mainPage').html()),
+    template: _.template($('#kid-routine-board').html()),
 
     initialize: function () {
       this.render();
@@ -15,9 +17,8 @@
     },
 
     render: function () {
-      $('#ListSection').empty();
-      $('#ListSection2').empty();
       $('.your-clock').empty();
+
       this.$el.html(this.template);
     }
 

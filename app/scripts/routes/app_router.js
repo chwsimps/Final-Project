@@ -13,7 +13,8 @@
       'parent_timing' : 'AddTimeSetUp',
       'edit_morning/:taskID' : 'EditRoutine',
       'edit_night/:taskID' : 'EditRoutineNight',
-      'morning_routines' : 'RunMorningRoutines'
+      'morning_routines' : 'RunMorningRoutines',
+      'routine_board' : 'DisplayRoutineBoard'
     },
 
     home: function (){
@@ -81,6 +82,12 @@
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.KidMorningRoutine({ collection: App.times });
+    },
+
+    DisplayRoutineBoard: function () {
+      if(!App.user) return App.router.navigate('login', { trigger: true});
+
+      new App.Views.KidRoutineBoard();
     }
 
   });
