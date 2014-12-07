@@ -9,6 +9,7 @@
   font-weight: bold;
   height: 200px;
   width: 50%;
+  margin-top: 23px;
   margin-left: 25%;
   margin-bottom: 20px;
 }
@@ -19,10 +20,15 @@
   height: 200px;
   width: 50%;
   margin-left: 25%;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  border-radius: 20px;
   img {
     width: 76.5%;
-    margin-top: -41px;
+    margin-top: -55px;
+  }
+  p {
+    color: white;
+    font-size: 35px;
   }
 }
 
@@ -84,12 +90,12 @@ body.sunrise {
       color: HSLA(168, 76%, 42%, 1);
       display: inline-block;
       margin-top: 47px;
-      margin-bottom: 50px;
+      margin-bottom: 29px;
       margin-left: 40px;
       letter-spacing: 8px;
+      animation-play-state: paused;
       &:hover {
-        // transform: scale(1.1);
-        // transition: all 0.3s;
+        animation-play-state: running;
       }
     }
   }
@@ -98,6 +104,10 @@ body.sunrise {
     padding: 10px;
     font-size: 25px;
     font-weight: bold;
+    animation-play-state: paused;
+    &:hover {
+      animation-play-state: running;
+    }
   }
   #ParentViewBtn {
     float: right;
@@ -153,6 +163,8 @@ body.sunrise {
   @include omega();
   #ParentRoutinesDisplay {
     @include display-box-parent;
+    color: white;
+    background-color: lightblue;
   }
 }
 #ParentRewards {
@@ -160,7 +172,8 @@ body.sunrise {
   @include omega();
   #ParentRewardsDisplay {
     @include display-box-parent;
-    background-color: lightblue;
+    color: white;
+    background-color: HSLA(55, 94%, 65%, 1);
   }
 }
 #ParentCharts {
@@ -168,7 +181,8 @@ body.sunrise {
   @include omega();
   #ParentChartsDisplay {
     @include display-box-parent;
-    background-color: lightcoral;
+    color: white;
+    background-color: lightgreen;
   }
 }
 #ParentTiming {
@@ -176,6 +190,7 @@ body.sunrise {
   @include omega();
   #ParentTimingDisplay {
     @include display-box-parent;
+    background-color: lightcoral;
   }
 }
 
@@ -251,25 +266,13 @@ input[type="range"]::-webkit-slider-thumb {
   $table-stripe-color: darken($table-background, 4);
   $table-stripe-color-hover: darken($table-stripe-color, 5);
   $table-padding: .75em 1em;
+  margin-top: 35px;
 
   border: $table-border;
   border-left: 0px;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: $base-border-radius;
-
-  tbody {
-    background-color: $table-background;
-    tr:hover > td, tr:hover > th {
-      background-color: HSLA(172, 52%, 73%, 1);
-    }
-    tr:nth-child(even) {
-      background-color: $table-stripe-color;
-      &:hover > td {
-        background-color: HSLA(215, 55%, 54%, 1);
-      }
-    }
-  }
 
   thead:first-of-type {
     tr:first-child > th:first-child {
@@ -293,40 +296,22 @@ input[type="range"]::-webkit-slider-thumb {
 
   thead {
     th {
-      background-color: $table-header-color;
-      padding: $table-padding;
+      background-color: HSLA(168, 77%, 42%, 1);
+      text-align: center;
       border-left: 1px solid $table-border-color;
       border-bottom: 0px;
     }
   }
 
   tbody {
-    background-color: $table-background;
+    background-color: HSLA(168, 54%, 70%, 1);
 
     td {
-      padding: $table-padding;
+      text-align: center;
       border-left: 1px solid $table-border-color;
       border-top: 1px solid $table-border-color;
       border-bottom: 0px;
-
-      button {
-        padding: .5em 1em .6em;
-        font-size: .7em;
-        margin-right: 0.5em;
-        display: inline-block;
-        width: 100%;
-        margin-bottom: .3em;
-        outline: none;
-
-        @include media($medium-screen) {
-          width: auto;
-          margin-bottom: 0;
-        }
-
-        @include media($large-screen) {
-          font-size: .8em;
-        }
-      }
+      height: 115px;
     }
   }
 }
