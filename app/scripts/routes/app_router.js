@@ -17,7 +17,8 @@
       'routine_board' : 'DisplayRoutineBoard'
     },
 
-    home: function (){
+    home: function () {
+
       new App.Views.MainHomeView();
     },
 
