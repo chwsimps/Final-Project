@@ -120,9 +120,11 @@ body.sunrise {
     }
     img {
       margin-top: -30px;
+      &:hover {
       animation: spin 4s linear infinite;
       @keyframes spin { 100% { -webkit-transform: rotate(360deg);
         transform:rotate(360deg); } }
+      }
     }
   }
 }
@@ -136,9 +138,10 @@ body.sunrise {
     }
     img {
       margin-top: -30px;
-      // animation: spin 4s linear infinite;
-      // @keyframes spin { 100% { -webkit-transform: rotate(360deg);
-      //   transform:rotate(360deg); } }
+      animation-play-state: paused;
+      &:hover {
+        animation-play-state: running;
+      }
     }
   }
 }
