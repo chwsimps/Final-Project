@@ -6,8 +6,10 @@
 //Mixins
 @mixin display-box {
   text-align: center;
+  height: 200px;
   width: 50%;
   margin-left: 25%;
+  margin-bottom: 20px;
 }
 
 // Custom Styles
@@ -86,11 +88,10 @@ body.sunrise {
       margin-top: 4px;
     }
     img {
-      margin-top: -20px;
-      &:hover {
-      transform: scale(1.3);
-      transition: all 0.3s;
-      }
+      margin-top: -30px;
+      animation: spin 4s linear infinite;
+      @keyframes spin { 100% { -webkit-transform: rotate(360deg);
+        transform:rotate(360deg); } }
     }
   }
 }
@@ -103,11 +104,10 @@ body.sunrise {
       margin-top: 4px;
     }
     img {
-      margin-top: -20px;
-      &:hover {
-      transform: scale(1.3);
-      transition: all 0.3s;
-      }
+      margin-top: -30px;
+      // animation: spin 4s linear infinite;
+      // @keyframes spin { 100% { -webkit-transform: rotate(360deg);
+      //   transform:rotate(360deg); } }
     }
   }
 }
