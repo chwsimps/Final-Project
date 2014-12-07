@@ -6,18 +6,39 @@
 //Mixins
 @mixin display-box {
   text-align: center;
+  font-weight: bold;
   height: 200px;
   width: 50%;
   margin-left: 25%;
   margin-bottom: 20px;
 }
 
+@mixin display-box-parent {
+  text-align: center;
+  font-weight: bold;
+  height: 200px;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 20px;
+  img {
+    width: 76.5%;
+    margin-top: -41px;
+  }
+}
+
 // Custom Styles
+
+* {
+  font-family: "Rudiment", Helvetica, Arial, sans-serif;
+  h1, h3, h4 {
+    font-family: "Rudiment", Helvetica, Arial, sans-serif;
+  }
+}
+
 body {
   @include outer-container;
   // background-color: HSLA(0, 0%, 93%, 1);
   background: url(../images/linedpaper.png);
-  font-family: "Rudiment", Helvetica, Arial, sans-serif;
   color: #333;
   button {
     box-shadow: 0px 5px 0px HSLA(215, 55%, 39%, 1);
@@ -59,7 +80,6 @@ body.sunrise {
       position: absolute;
     }
     h1 {
-      font-family: "Rudiment", Helvetica, Arial, sans-serif;
       font-size: 55px;
       color: HSLA(168, 76%, 42%, 1);
       display: inline-block;
@@ -96,7 +116,6 @@ body.sunrise {
   #MorningRoutineDisplay {
     @include display-box;
     h4 {
-      font-family: "Rudiment", Helvetica, Arial, sans-serif;
       margin-top: 4px;
     }
     img {
@@ -113,7 +132,6 @@ body.sunrise {
   #NightRoutineDisplay {
     @include display-box;
     h4 {
-      font-family: "Rudiment", Helvetica, Arial, sans-serif;
       margin-top: 4px;
     }
     img {
@@ -131,15 +149,14 @@ body.sunrise {
   @include span-columns(6);
   @include omega();
   #ParentRoutinesDisplay {
-    @include display-box;
-    background-color: lightgreen;
+    @include display-box-parent;
   }
 }
 #ParentRewards {
   @include span-columns(6);
   @include omega();
   #ParentRewardsDisplay {
-    @include display-box;
+    @include display-box-parent;
     background-color: lightblue;
   }
 }
@@ -147,7 +164,7 @@ body.sunrise {
   @include span-columns(6);
   @include omega();
   #ParentChartsDisplay {
-    @include display-box;
+    @include display-box-parent;
     background-color: lightcoral;
   }
 }
@@ -155,8 +172,7 @@ body.sunrise {
   @include span-columns(6);
   @include omega();
   #ParentTimingDisplay {
-    @include display-box;
-    background-color: lightyellow;
+    @include display-box-parent;
   }
 }
 
@@ -219,13 +235,6 @@ input[type="range"]::-webkit-slider-thumb {
     transform: scale(1.5);
     transition: all 0.3s;
   }
-}
-
-#invis_input {
-  outline: none;
-  border: none;
-  box-shadow: none;
-  background-color: HSLA(0, 0%, 93%, 1)
 }
 
 // Routine Board CSS for Morning/Night Views
