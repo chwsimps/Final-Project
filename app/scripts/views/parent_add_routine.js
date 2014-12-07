@@ -49,7 +49,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       $(input_form)[0].reset();
 
-      // location.reload();
+      location.reload();
     },
 
     AddMorningRoutine: function (e) {

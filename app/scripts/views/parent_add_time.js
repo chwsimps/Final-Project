@@ -55,7 +55,8 @@
 
     AddMorningTime: function (e) {
       this.AddTime(e, '#TimingMorningInput', '#AddTimeLeft', 'morning');
-      $('#AddMorningTime').text('Locked In');
+      // $('#AddMorningTime').text('Locked In');
+      $.cookie($('#AddMorningTime').text('Locked In'));
     },
 
     AddNightTime: function (e) {
