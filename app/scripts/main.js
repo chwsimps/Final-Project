@@ -37,7 +37,7 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
       currUsr = '';
       $('#logOut').text('Log In');
     } else {
-      currUsr = 'Welcome ' + App.user.attributes.username;
+      currUsr = 'Hey ' + App.user.attributes.username + '!';
       $('#logOut').text('Log Out');
     }
     $('#loggedIn').html(currUsr);
