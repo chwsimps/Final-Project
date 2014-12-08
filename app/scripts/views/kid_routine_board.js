@@ -20,6 +20,8 @@
       $('.your-clock').empty();
 
       this.$el.html(this.template);
+
+      $('#monday').text('hey');
     }
 
   });

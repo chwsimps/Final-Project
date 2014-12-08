@@ -12,9 +12,12 @@
     template: _.template($('#parent-timing').html()),
 
     initialize: function () {
-      this.render();
 
       $('#MainSection').html(this.$el);
+
+      this.render();
+
+
 
     },
 
@@ -22,6 +25,9 @@
       this.$el.empty();
 
       this.$el.html(this.template);
+
+      $('#setTime').html(App.user.attributes.time_morning);
+
 
     },
 
@@ -61,9 +67,19 @@
     AddMorningTime: function (e) {
       e.preventDefault();
 
-      App.user.save({
-        time_morning: parseInt($('#TimingMorningInput').val()*60)
-      });
+      var time_morning = parseInt($('#TimingMorningInput').val()*60);
+
+      console.log(time_morning);
+
+      App.user.set('time_morning', time_morning);
+
+      App.user.save();
+
+      // var test1 = App.user.attributes.time_morning;
+      $('#setTime').html(time_morning);
+      // console.log(App.user.attributes.time_morning);
+
+
 
       $('#AddMorningTime').text('Locked In');
     },
@@ -74,6 +90,8 @@
       App.user.save({
         time_night: parseInt($('#TimingNightInput').val()*60)
       });
+
+      $('#setTimeNight').html(App.user.attributes.time_night / 60 + ' Minutes');
 
       $('#AddNightTime').text('Locked In');
     }

@@ -203,6 +203,7 @@
           <span class="highlight"></span><output id="rangevalue">45</output><span> Minutes</span>
           <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingMorningInput" onchange="rangevalue.value=value"/>
           <button id="AddMorningTime">Lock Time In</button>
+          <div id="setTime"></div>
         </form>
       </div>
       <div id="NightCountdown">
@@ -211,6 +212,7 @@
           <span class="highlight"></span><output id="rangevalue">45</output><span> Minutes</span>
           <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingNightInput" onchange="rangevalue.value=value"/>
           <button id="AddNightTime">Lock Time In</button>
+          <div id="setTimeNight"></div>
         </form>
       </div>
     </script>
@@ -222,11 +224,9 @@
     </script>
 
     <script type="text/template" id='parent-view-time-night'>
-      <% if (time_of_day === "night") { %>
       <div class="routines_time_night" id="<%= objectId %>">
-          <div id="night_time_list"><%= timing %></div>
+          <div id="night_time_list"><%= time_night %></div>
       </div>
-      <% } %>
     </script>
 
     <!-- Parents Rewards Scripts ================================== -->
