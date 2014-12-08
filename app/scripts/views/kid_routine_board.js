@@ -6,14 +6,17 @@
 
     className: 'KidsRoutineBoard',
 
-    events: {},
+    events: {
+      'click .next-button' : 'AddDailyIcon'
+
+    },
 
     template: _.template($('#kid-routine-board').html()),
 
     initialize: function () {
-      this.render();
-
       $('#MainSection').html(this.$el);
+
+      this.render();
     },
 
     render: function () {
@@ -21,7 +24,21 @@
 
       this.$el.html(this.template);
 
-      $('#monday').text('hey');
+      $('#sunday').html(App.user.attributes.daily_display);
+    },
+
+    AddDailyIcon: function (e) {
+      e.preventDefault();
+
+      var daily_display = App.user.attributes.daily_display;
+
+      console.log(daily_display);
+
+      App.user.set('daily_display', daily_display);
+
+      App.user.save();
+
+      $('#sunday').html(daily_display);
     }
 
   });

@@ -28,7 +28,8 @@
       password: $("#signupPassword").val(),
       email: $("#signupEmail").val(),
       time_morning: 1800,
-      time_night: 1800
+      time_night: 1800,
+      daily_display: '★'
       });
 
       // user.signUp();

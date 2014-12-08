@@ -61,8 +61,8 @@
 
       new App.Views.ParentAddTime();
 
-      new App.Views.ParentTimeView();
-      new App.Views.ParentTimeViewNight();
+      // new App.Views.ParentTimeView();
+      // new App.Views.ParentTimeViewNight();
     },
 
     EditRoutine: function (taskID) {
@@ -82,7 +82,7 @@
     RunMorningRoutines: function () {
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
-      new App.Views.KidMorningRoutine({ collection: App.times });
+      new App.Views.KidMorningRoutine({ collection: App.tasks });
     },
 
     DisplayRoutineBoard: function () {
