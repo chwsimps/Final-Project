@@ -216,33 +216,17 @@
     </script>
 
     <script type="text/template" id='parent-view-time'>
-      <% if (time_of_day === "morning") { %>
       <div class="routines_time_morning" id="<%= objectId %>">
-        <a href='#/edit_morning/<%= objectId %>'>
-          <div id="morning_time_list"><%= timing %></div>
-        </a>
+          <div id="morning_time_list"><%= time_morning %></div>
       </div>
-      <% } %>
     </script>
 
     <script type="text/template" id='parent-view-time-night'>
       <% if (time_of_day === "night") { %>
       <div class="routines_time_night" id="<%= objectId %>">
-        <a href='#/edit_night/<%= objectId %>'>
           <div id="night_time_list"><%= timing %></div>
-        </a>
       </div>
       <% } %>
-    </script>
-
-    <script type="text/template" id='parent-edit-time'>
-      <div class="routines_time_morning" id="<%= objectId %>">
-        <form id="edit-time">
-          <span class="highlight"></span><output id="rangevalue">50</output><span> Minutes</span>
-          <input class="bar" type="range" min="0" max="90" step="1" value="<%= timing %>" id="TimingMorningInput" onchange="rangevalue.value=value"/>
-          <button>Update</button>
-        </form>
-      </div>
     </script>
 
     <!-- Parents Rewards Scripts ================================== -->
@@ -302,14 +286,14 @@
         </thead>
         <tbody>
           <tr>
-            <td>★ or &xotime;</td>
-            <td>★ or &xotime;</td>
-            <td>★ or &xotime;</td>
-            <td>★ or &xotime;</td>
-            <td>★ or &xotime;</td>
-            <td>★ or &xotime;</td>
-            <td>★ or &xotime;</td>
-            <td>Reward Display</td>
+            <td id="sunday">★ or &xotime;</td>
+            <td id="monday">★ or &xotime;</td>
+            <td id="tuesday">★ or &xotime;</td>
+            <td id="wednesday">★ or &xotime;</td>
+            <td id="thursday">★ or &xotime;</td>
+            <td id="friday">★ or &xotime;</td>
+            <td id="saturday">★ or &xotime;</td>
+            <td id="reward">Reward Display</td>
           </tr>
         </tbody>
       </table>

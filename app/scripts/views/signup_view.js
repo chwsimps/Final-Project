@@ -27,6 +27,8 @@
       username: $("#signupName").val(),
       password: $("#signupPassword").val(),
       email: $("#signupEmail").val(),
+      time_morning: 1800,
+      time_night: 1800
       });
 
       // user.signUp();

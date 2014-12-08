@@ -25,42 +25,56 @@
 
     },
 
-    AddTime: function (e, input_id, input_form, tod) {
-      e.preventDefault();
+    // AddTime: function (e) {
+    //   e.preventDefault();
+    //
+    //   App.user.save({
+    //     time_morning: parseInt($('#TimingMorningInput').val()*60),
+    //     time_night: parseInt($('#TimingNightInput').val()*60),
+    //   });
 
-      at = new App.Models.Time({
-        timing: parseInt($(input_id).val()*60),
-        time_of_day: tod,
-        user: App.user
-      });
-
-      $(input_id).hide();
-
-      at.setACL(new Parse.ACL(App.user));
-
-      at.save(null, {
-        success: function () {
-          App.times.add(at);
-          App.router.navigate('parent_timing', { trigger: true });
-        },
-        error: function (obj, e) {
-          console.log('Shit went wrong! ' + e.message);
-        }
-      });
+      // at = new App.Models.Time({
+      //   timing: parseInt($(input_id).val()*60),
+      //   time_of_day: tod,
+      //   user: App.user
+      // });
+      //
+      // // $(input_id).hide();
+      //
+      // at.setACL(new Parse.ACL(App.user));
+      //
+      // at.save(null, {
+      //   success: function () {
+      //     App.times.add(at);
+      //     App.router.navigate('parent_timing', { trigger: true });
+      //   },
+      //   error: function (obj, e) {
+      //     console.log('Shit went wrong! ' + e.message);
+      //   }
+      // });
 
       //
       // location.reload();
 
-    },
+    // },
 
     AddMorningTime: function (e) {
-      this.AddTime(e, '#TimingMorningInput', '#AddTimeLeft', 'morning');
-      // $('#AddMorningTime').text('Locked In');
-      $.cookie($('#AddMorningTime').text('Locked In'));
+      e.preventDefault();
+
+      App.user.save({
+        time_morning: parseInt($('#TimingMorningInput').val()*60)
+      });
+
+      $('#AddMorningTime').text('Locked In');
     },
 
     AddNightTime: function (e) {
-      this.AddTime(e, '#TimingNightInput', '#AddTimeRight', 'night');
+      e.preventDefault();
+
+      App.user.save({
+        time_night: parseInt($('#TimingNightInput').val()*60)
+      });
+
       $('#AddNightTime').text('Locked In');
     }
 

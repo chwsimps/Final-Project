@@ -22,12 +22,14 @@
 
       $('#MainSection').html(this.$el);
 
-      var timer = this.collection.toJSON();
-      this.$el.html(this.template(timer));
+      // var timer = this.collection.toJSON();
+      // this.$el.html(this.template(timer));
+
+      var timer_morning = App.user.attributes.time_morning;
 
       $('.start-button').click(function () {
-        console.log(timer[0].timing);
-        var clock = $('.your-clock').FlipClock(timer[0].timing, {
+        console.log(App.user.attributes.time_morning);
+        var clock = $('.your-clock').FlipClock(timer_morning, {
           countdown: true,
           clockFace: 'MinuteCounter',
           callbacks: {
@@ -93,6 +95,7 @@
       // Check if all routines are done. If this.routine == collection.length.
       if(this.routine === this.collection.length) {
         App.router.navigate('routine_board', { trigger: true });
+        $('#sunday').text('test');
       } else {
         this.render_routine();
       }

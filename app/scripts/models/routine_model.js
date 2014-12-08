@@ -10,7 +10,6 @@
       routine: '',
       reward_daily: '',
       reward_weekly: '',
-      reward_monthly: '',
       user: ''
     },
 

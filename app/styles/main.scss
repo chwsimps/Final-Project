@@ -24,7 +24,7 @@
   border-radius: 20px;
   img {
     width: 76.5%;
-    margin-top: -55px;
+    margin-top: -22%;
   }
   p {
     color: white;
@@ -312,6 +312,10 @@ input[type="range"]::-webkit-slider-thumb {
   background-image: linear-gradient(to bottom, HSLA(215, 55%, 54%, 1) 0, HSLA(215, 55%, 38%, 1) 100%);
   cursor: pointer;
   &:hover {
+    transform: scale(1.5);
+    transition: all 0.3s;
+  }
+  &:active {
     transform: scale(1.5);
     transition: all 0.3s;
   }
