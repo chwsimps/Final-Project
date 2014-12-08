@@ -32,6 +32,22 @@
   }
 }
 
+@mixin parent-routine-display {
+  h3 {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  text-align: center;
+  }
+  input {
+    width: 90%;
+    display: inline-block;
+  }
+  button {
+    padding: 10px;
+    margin-top: -10px;
+  }
+}
+
 // Custom Styles
 
 * {
@@ -119,6 +135,15 @@ body.sunrise {
   }
 }
 
+#LoginSection {
+  text-align: -webkit-right;
+  width: 30%;
+  margin-left: 69%;
+  .signup_btn {
+    font-weight: bold;
+  }
+}
+
 // Main Page Routes to Morning/Night Views
 
 .LeftMP {
@@ -198,10 +223,12 @@ body.sunrise {
 
 #ParentRoutineMorning {
   @include span-columns(6);
+  @include parent-routine-display;
 }
 
 #ParentRoutineNight {
   @include span-columns(6);
+  @include parent-routine-display;
 }
 
 #ListSection {
@@ -209,6 +236,37 @@ body.sunrise {
 }
 #ListSection2 {
   @include span-columns(6);
+}
+
+.updateTask {
+  background-color: HSLA(105, 49%, 70%, 1);
+  box-shadow: 0px 5px 0px HSLA(105, 71%, 41%, 1);
+  &:hover {
+    background-color: HSLA(105, 49%, 70%, 1);
+  }
+}
+
+.deleteTask {
+  background-color: HSLA(349, 72%, 66%, 1);
+  box-shadow: 0px 5px 0px HSLA(349, 90%, 45%, 1);
+  &:hover {
+    background-color: HSLA(349, 72%, 66%, 1);
+  }
+}
+
+#edit_moro, #edit_moni {
+  margin-top: 28px;
+}
+
+.routines_list_morning, .routines_list_night {
+  font-weight: bold;
+  img {
+    padding-left: 2%;
+  }
+  div {
+    display: inline-block;
+    width: 75%;
+  }
 }
 
 // Parent Timing Page
