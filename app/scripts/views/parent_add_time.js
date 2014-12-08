@@ -12,13 +12,9 @@
     template: _.template($('#parent-timing').html()),
 
     initialize: function () {
-
       $('#MainSection').html(this.$el);
 
       this.render();
-
-
-
     },
 
     render: function () {
@@ -26,9 +22,8 @@
 
       this.$el.html(this.template);
 
-      $('#setTime').html(App.user.attributes.time_morning);
-
-
+      $('#setTime').html(App.user.attributes.time_morning/60 + " Minutes");
+      $('#setTimeNight').html(App.user.attributes.time_night/60 + " Minutes");
     },
 
     // AddTime: function (e) {
@@ -75,11 +70,7 @@
 
       App.user.save();
 
-      // var test1 = App.user.attributes.time_morning;
-      $('#setTime').html(time_morning);
-      // console.log(App.user.attributes.time_morning);
-
-
+      $('#setTime').html(time_morning/60 + " Minutes");
 
       $('#AddMorningTime').text('Locked In');
     },
@@ -87,11 +78,13 @@
     AddNightTime: function (e) {
       e.preventDefault();
 
-      App.user.save({
-        time_night: parseInt($('#TimingNightInput').val()*60)
-      });
+      var time_night = parseInt($('#TimingNightInput').val()*60);
 
-      $('#setTimeNight').html(App.user.attributes.time_night / 60 + ' Minutes');
+      App.user.set('time_night', time_night);
+
+      App.user.save();
+
+      $('#setTimeNight').html(time_night/60 + " Minutes");
 
       $('#AddNightTime').text('Locked In');
     }
