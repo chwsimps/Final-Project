@@ -426,6 +426,42 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
+// Kid Morning Routines View
+
+.KidMorningRoutines, .KidNightRoutines {
+  h3 {
+    font-size: 2.25em;
+    margin-top: 5%;
+    font-weight: bold;
+  }
+  text-align: center;
+  button {
+    margin-top: 3%;
+  }
+}
+
+.KidNightRoutines {
+  h3 {
+    color: white;
+  }
+}
+
+// Kids Routine Board
+
+.KidsRoutineBoard {
+  text-align: center;
+  h3 {
+    color: HSLA(360, 100%, 34%, 1);
+    font-size: 2.25em;
+    margin-top: 5%;
+    font-weight: bold;
+  }
+  span {
+    font-weight: bold;
+    color: HSLA(360, 100%, 34%, 1);
+  }
+}
+
 // Footer Section
 
 footer {
