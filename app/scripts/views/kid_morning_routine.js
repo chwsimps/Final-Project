@@ -94,7 +94,6 @@
       // Check if all routines are done. If this.routine == collection.length.
       if(this.routine === this.collection.length) {
         App.router.navigate('routine_board', { trigger: true });
-        $('#sunday').text('test');
       } else {
         this.render_routine();
       }

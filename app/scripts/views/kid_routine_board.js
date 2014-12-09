@@ -7,7 +7,6 @@
     className: 'KidsRoutineBoard',
 
     events: {
-      'click .next-button' : 'AddDailyIcon'
 
     },
 
@@ -24,19 +23,11 @@
 
       this.$el.html(this.template);
 
+      var start = new Date().toJSON().slice(0,10);
+
+      console.log(start);
+
       $('#tuesday').html(App.user.attributes.daily_display);
-    },
-
-    AddDailyIcon: function (e) {
-      e.preventDefault();
-
-      var daily_display = App.user.attributes.daily_display;
-
-      // console.log(daily_display);
-
-      App.user.set('daily_display', daily_display);
-
-      App.user.save();
     }
 
   });
