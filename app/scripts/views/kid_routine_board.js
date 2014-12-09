@@ -23,11 +23,33 @@
 
       this.$el.html(this.template);
 
-      var start = new Date().toJSON().slice(0,10);
+      var start = (new Date().getDay());
 
       console.log(start);
 
-      $('#tuesday').html(App.user.attributes.daily_display);
+      switch(start) {
+        case 0:
+          $('#sunday').html(App.user.attributes.daily_display);
+          break;
+        case 1:
+          $('#monday').html(App.user.attributes.daily_display);
+          break;
+        case 2:
+          $('#tuesday').html(App.user.attributes.daily_display);
+          break;
+        case 3:
+          $('#wednesday').html(App.user.attributes.daily_display);
+          break;
+        case 4:
+          $('#thursday').html(App.user.attributes.daily_display);
+          break;
+        case 5:
+          $('#friday').html(App.user.attributes.daily_display);
+          break;
+        case 6:
+          $('#saturday').html(App.user.attributes.daily_display);
+          break;
+      }
     }
 
   });
