@@ -61,8 +61,8 @@
 
       new App.Views.ParentAddTime();
 
-      // new App.Views.ParentTimeView();
-      // new App.Views.ParentTimeViewNight();
+      new App.Views.ParentTimeView();
+      new App.Views.ParentTimeViewNight();
     },
 
     EditRoutine: function (taskID) {
