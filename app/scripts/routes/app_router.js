@@ -14,6 +14,7 @@
       'edit_morning/:taskID' : 'EditRoutine',
       'edit_night/:taskID' : 'EditRoutineNight',
       'morning_routines' : 'RunMorningRoutines',
+      'night_routines' : 'RunNightRoutines',
       'routine_board' : 'DisplayRoutineBoard'
     },
 
@@ -83,6 +84,12 @@
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.KidMorningRoutine({ collection: App.tasks });
+    },
+
+    RunNightRoutines: function () {
+      if(!App.user) return App.router.navigate('login', { trigger: true});
+
+      new App.Views.KidNightRoutine({ collection: App.tasks });
     },
 
     DisplayRoutineBoard: function () {

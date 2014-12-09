@@ -25,11 +25,11 @@
 
       // console.log(start);
 
-      if($('next-button').click()) {
-        console.log('Too Slow');
-      } else {
-        console.log('Got a Star');
-      }
+      // if($('next-button').click()) {
+      //   console.log('Too Slow');
+      // } else {
+      //   console.log('Got a Star');
+      // }
 
       switch(start) {
         case 0:
@@ -53,8 +53,6 @@
         case 6:
           $('#saturday').html(App.user.attributes.daily_display);
           break;
-        default:
-          console.log('default');
       }
 
       var reward_weekly = App.user.attributes.weekly_reward;

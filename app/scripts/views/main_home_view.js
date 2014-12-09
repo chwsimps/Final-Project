@@ -21,6 +21,14 @@
 
       });
 
+      $('.NightRoutineMP').click( function () {
+
+        $('body').addClass('moontime');
+        // $.cookie('background-color','red');
+        $('.UserHeader').empty();
+
+      });
+
     }
 
   });
