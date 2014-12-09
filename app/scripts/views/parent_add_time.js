@@ -38,8 +38,6 @@
       App.user.save();
 
       $('#setTime').html(time_morning/60 + " Minutes");
-
-      $('#AddMorningTime').text('Locked In');
     },
 
     AddNightTime: function (e) {
@@ -52,8 +50,6 @@
       App.user.save();
 
       $('#setTimeNight').html(time_night/60 + " Minutes");
-
-      $('#AddNightTime').text('Locked In');
     }
 
   });
