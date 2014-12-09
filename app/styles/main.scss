@@ -17,14 +17,14 @@
 @mixin display-box-parent {
   text-align: center;
   font-weight: bold;
-  height: 200px;
+  height: 175px;
   width: 50%;
   margin-left: 25%;
   margin-bottom: 24px;
   border-radius: 20px;
   img {
-    width: 70%;
-    margin-top: -17%;
+    width: 60%;
+    margin-top: -18%;
   }
   p {
     color: white;
@@ -352,7 +352,15 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
-// Routine Board CSS for Morning/Night Views
+// Routine Board CSS
+
+#sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
+  font-size: 70px;
+  padding: 0;
+  color: gold;
+}
+
+// Routine Board Table for Morning/Night Views
 
 .table-borders {
   $table-border-color: $base-border-color;
@@ -413,7 +421,7 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
-//
+// Footer Section
 
 footer {
   position: fixed;

@@ -24,7 +24,7 @@
 
       this.$el.html(this.template);
 
-      $('#sunday').html(App.user.attributes.daily_display);
+      $('#tuesday').html(App.user.attributes.daily_display);
     },
 
     AddDailyIcon: function (e) {
@@ -32,13 +32,11 @@
 
       var daily_display = App.user.attributes.daily_display;
 
-      console.log(daily_display);
+      // console.log(daily_display);
 
       App.user.set('daily_display', daily_display);
 
       App.user.save();
-
-      $('#sunday').html(daily_display);
     }
 
   });
