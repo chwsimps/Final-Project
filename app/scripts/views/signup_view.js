@@ -29,7 +29,9 @@
       email: $("#signupEmail").val(),
       time_morning: 1800,
       time_night: 1800,
-      daily_display: '★'
+      daily_display: '★',
+      daily_reward: 'Add Daily Reward',
+      weekly_reward: 'Add Weekly Reward'
       });
 
       // user.signUp();

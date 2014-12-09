@@ -6,9 +6,7 @@
 
     className: 'KidsRoutineBoard',
 
-    events: {
-
-    },
+    events: {},
 
     template: _.template($('#kid-routine-board').html()),
 
@@ -25,7 +23,13 @@
 
       var start = (new Date().getDay());
 
-      console.log(start);
+      // console.log(start);
+
+      if($('next-button').click()) {
+        console.log('Too Slow');
+      } else {
+        console.log('Got a Star');
+      }
 
       switch(start) {
         case 0:
@@ -49,7 +53,14 @@
         case 6:
           $('#saturday').html(App.user.attributes.daily_display);
           break;
+        default:
+          console.log('default');
       }
+
+      var reward_weekly = App.user.attributes.weekly_reward;
+      // console.log(reward_weekly);
+      $('#reward').html(App.user.attributes.weekly_reward);
+
     }
 
   });
