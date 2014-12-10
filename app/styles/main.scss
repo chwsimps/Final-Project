@@ -149,6 +149,11 @@ body.moontime {
         animation-play-state: running;
       }
     }
+    span {
+      position: absolute;
+      margin: -14% 0 0 37%;
+      color: HSLA(349, 90%, 45%, 1);
+    }
   }
   #loggedIn {
     position: absolute;
