@@ -23,14 +23,6 @@
 
       var start = (new Date().getDay());
 
-      // console.log(start);
-
-      // if($('next-button').click()) {
-      //   console.log('Too Slow');
-      // } else {
-      //   console.log('Got a Star');
-      // }
-
       switch(start) {
         case 0:
           $('#starSun').html(App.user.attributes.daily_display);
