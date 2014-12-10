@@ -5,7 +5,8 @@
     className: 'ParentRewards',
 
     events: {
-      'click #addWeeklyReward' : 'AddWeeklyReward'
+      'click #addWeeklyReward' : 'AddWeeklyReward',
+      'click #addDailyReward' : 'AddDailyReward'
     },
 
     template: _.template($('#parent-rewards').html()),
@@ -16,6 +17,7 @@
       this.render();
 
       $('#setWeeklyReward').html(App.user.attributes.weekly_reward);
+      $('#setDailyReward').html(App.user.attributes.daily_reward);
     },
 
     render: function () {
@@ -34,6 +36,19 @@
       App.user.save();
 
       $('#setWeeklyReward').html(weekly_reward);
+
+    },
+
+    AddDailyReward: function (e) {
+      e.preventDefault();
+
+      var daily_reward = $('#daily-reward').val();
+
+      App.user.set('daily_reward', daily_reward);
+
+      App.user.save();
+
+      $('#setDailyReward').html(daily_reward);
 
     }
 
