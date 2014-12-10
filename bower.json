@@ -10,6 +10,7 @@
     "normalize-css": "~3.0.1",
     "backbone": "~1.1.2",
     "jquery-cookie": "~1.4.1",
-    "moment": "~2.8.4"
+    "moment": "~2.8.4",
+    "chartjs": "~0.2.0"
   }
 }

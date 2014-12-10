@@ -33,25 +33,25 @@
 
       switch(start) {
         case 0:
-          $('#sunday').html(App.user.attributes.daily_display);
+          $('#starSun').html(App.user.attributes.daily_display);
           break;
         case 1:
-          $('#monday').html(App.user.attributes.daily_display);
+          $('#starMon').html(App.user.attributes.daily_display);
           break;
         case 2:
-          $('#tuesday').html(App.user.attributes.daily_display);
+          $('#starTue').html(App.user.attributes.daily_display);
           break;
         case 3:
-          $('#wednesday').html(App.user.attributes.daily_display);
+          $('#starWed').html(App.user.attributes.daily_display);
           break;
         case 4:
-          $('#thursday').html(App.user.attributes.daily_display);
+          $('#starThu').html(App.user.attributes.daily_display);
           break;
         case 5:
-          $('#friday').html(App.user.attributes.daily_display);
+          $('#starFri').html(App.user.attributes.daily_display);
           break;
         case 6:
-          $('#saturday').html(App.user.attributes.daily_display);
+          $('#starSat').html(App.user.attributes.daily_display);
           break;
       }
 
