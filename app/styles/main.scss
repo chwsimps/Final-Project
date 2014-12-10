@@ -462,6 +462,15 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
+// Extra Animations
+
+#floatingImage {
+  // display: none;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 13.5%;
+}
+
 // Footer Section
 
 footer {
