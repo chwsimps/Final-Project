@@ -11,6 +11,7 @@
       'parent_routines' : 'AddRoutine',
       'parent_rewards' : 'AddRewards',
       'parent_timing' : 'AddTimeSetUp',
+      'parent_charts' : 'ViewCharts',
       'edit_morning/:taskID' : 'EditRoutine',
       'edit_night/:taskID' : 'EditRoutineNight',
       'morning_routines' : 'RunMorningRoutines',
@@ -96,6 +97,12 @@
       if(!App.user) return App.router.navigate('login', { trigger: true});
 
       new App.Views.KidRoutineBoard();
+    },
+
+    ViewCharts: function () {
+      if(!App.user) return App.router.navigate('login', { trigger: true});
+
+      new App.Views.ParentChartView();
     }
 
   });
