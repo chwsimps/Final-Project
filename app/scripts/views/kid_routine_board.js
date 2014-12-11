@@ -34,7 +34,7 @@
           $('#starTue').html(App.user.attributes.daily_display);
           break;
         case 3:
-          $('#starWed').html(App.user.attributes.daily_display);
+          $('#starWed').html('<img src=' + App.user.attributes.daily_display + '/>');
           break;
         case 4:
           $('#starThu').html(App.user.attributes.daily_display);

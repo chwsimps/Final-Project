@@ -21,16 +21,16 @@
           "theme": "light",
           "dataProvider": [{
               "Task": "Eat Breakfast",
-              "Seconds": 582
+              "Seconds": 9.7
             }, {
               "Task": "Get Dressed",
-              "Seconds": 369
+              "Seconds": 8.4
             }, {
               "Task": "Brush Teeth",
-              "Seconds": 423
+              "Seconds": 4.7
             }, {
               "Task": "Pick Out Snack",
-              "Seconds": 45
+              "Seconds": 0.3
             }],
           "titleField": "Task",
           "valueField": "Seconds",

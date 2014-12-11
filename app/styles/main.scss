@@ -402,6 +402,9 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 70px;
   padding: 0;
   color: HSLA(46, 100%, 50%, 1);
+  img {
+    margin-bottom: -8%;
+  }
 }
 
 #reward {

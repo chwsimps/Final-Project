@@ -34,9 +34,37 @@
           clockFace: 'MinuteCounter',
           callbacks: {
             stop: function() {
-              alert("Time's Up! You'll Do It Next Time");
+              var alert = confirm("Time's Up! You'll Do It Next Time");
               $('.your-clock').empty();
               App.router.navigate('routine_board', { trigger: true });
+              if(alert) {
+                console.log('hey');
+                var start = (new Date().getDay());
+
+                switch(start) {
+                  case 0:
+                    $('#starSun').html(App.user.attributes.daily_display);
+                    break;
+                  case 1:
+                    $('#starMon').html(App.user.attributes.daily_display);
+                    break;
+                  case 2:
+                    $('#starTue').html(App.user.attributes.daily_display);
+                    break;
+                  case 3:
+                    $('#starWed').html('<img src=' + App.user.attributes.fail_display + '/>');
+                    break;
+                  case 4:
+                    $('#starThu').html(App.user.attributes.daily_display);
+                    break;
+                  case 5:
+                    $('#starFri').html(App.user.attributes.daily_display);
+                    break;
+                  case 6:
+                    $('#starSat').html(App.user.attributes.daily_display);
+                    break;
+                }
+              }
             }
           }
         });
