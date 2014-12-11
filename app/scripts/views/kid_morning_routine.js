@@ -28,11 +28,12 @@
 
       $('.start-button').click(function () {
         console.log(App.user.attributes.time_morning);
-        var clock = $('.your-clock').FlipClock(timer_morning, {
+        App.clock = $('.your-clock').FlipClock(timer_morning, {
           countdown: true,
           clockFace: 'MinuteCounter',
           callbacks: {
             stop: function() {
+              if( App.clock.time.time > 1 ) return;
               var alert = confirm("Time's Up! You'll Do It Next Time");
               $('.your-clock').empty();
               App.router.navigate('routine_board', { trigger: true });
@@ -111,65 +112,45 @@
       // Re-render the view.
       this.render_routine();
 
-      var minutes=0;
-      var seconds=0;
-      var timer=setInterval(function() {
+      App.counter=0;
+      App.timerStart = setInterval(function() {
         $('.timer').empty();
-
-          seconds++;
-          if(seconds<=9) {
-        $('.timer').append("0"+ minutes + " : 0" + seconds);
-      } else{
-        $('.timer').append("0"+ minutes + " : 0" + seconds);
-      }
-        if(seconds===59){
-          seconds=-1;
-          minutes++;
-        }
-
+          App.counter++;
+          console.log(App.counter);
       }, 1000);
 
       $('.next-button').on('click', function(){
-        clearInterval(timer);
-        console.log(timer);
+        clearInterval(App.timerStart);
+        //console.log(App.timerStart);
       });
     },
 
     nextChore: function (e) {
       e.preventDefault();
 
+      clearInterval(App.timerStart);
+
       // Incrementing (bump) this.routine.
       this.routine = this.routine + 1;
       // Check if all routines are done. If this.routine == collection.length.
       if(this.routine === this.collection.length) {
-        App.router.navigate('routine_board', { trigger: true });
+        return App.router.navigate('routine_board', { trigger: true });
       } else {
         this.render_routine();
       }
       // If they are all done -> // Navigate/Redirect to "routine board" view.
       // Else -> // Re-render.
 
-      var minutes=0;
-      var seconds=0;
-      var timer=setInterval(function() {
+      App.counter=0;
+      App.timerNext = setInterval(function() {
         $('.timer').empty();
-
-          seconds++;
-          if(seconds<=9) {
-        $('.timer').append("0"+ minutes + " : 0" + seconds);
-      } else{
-        $('.timer').append("0"+ minutes + " : 0" + seconds);
-      }
-        if(seconds===59){
-          seconds=-1;
-          minutes++;
-        }
-
+          App.counter++;
+          console.log(App.counter);
       }, 1000);
 
       $('.next-button').on('click', function(){
-        clearInterval(timer);
-        console.log(timer);
+        clearInterval(App.timerNext);
+        //console.log(timer);
       });
 
     }
