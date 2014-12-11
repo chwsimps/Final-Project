@@ -90,7 +90,7 @@
 body {
   @include outer-container;
   // background-color: HSLA(0, 0%, 93%, 1);
-  background: url(../images/linedpaper.png);
+  background: url(../images/chalkboard.png);
   color: #333;
   button {
     box-shadow: 0px 5px 0px HSLA(215, 55%, 39%, 1);
@@ -192,6 +192,7 @@ body.moontime {
     @include display-box;
     h4 {
       margin-top: 4px;
+      color: HSLA(215, 56%, 39%, 1);
     }
     img {
       margin-top: -30px;
@@ -210,6 +211,7 @@ body.moontime {
     @include display-box;
     h4 {
       margin-top: 4px;
+      color: HSLA(215, 56%, 39%, 1);
     }
     img {
       margin-top: -30px;
@@ -304,8 +306,12 @@ body.moontime {
     padding-left: 2%;
   }
   div {
+    color: black;
     display: inline-block;
     width: 75%;
+    &:hover {
+      color: HSLA(105, 69%, 41%, 1);
+    }
   }
 }
 
