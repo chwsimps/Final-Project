@@ -30,15 +30,15 @@
               "Task": "Brush Teeth",
               "Seconds": 4.7
             }, {
-              "Task": "Pick Out Snack",
-              "Seconds": 0.3
+              "Task": "Comb Hair",
+              "Seconds": 1.2
             }],
           "titleField": "Task",
           "valueField": "Seconds",
           "labelRadius": 5,
 
           "radius": "42%",
-          "innerRadius": "60%",
+          "innerRadius": "50%",
           "labelText": "[[Task]]"
       });
 

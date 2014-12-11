@@ -110,6 +110,29 @@
       this.template = _.template($('#next-routine').html());
       // Re-render the view.
       this.render_routine();
+
+      var minutes=0;
+      var seconds=0;
+      var timer=setInterval(function() {
+        $('.timer').empty();
+
+          seconds++;
+          if(seconds<=9) {
+        $('.timer').append("0"+ minutes + " : 0" + seconds);
+      } else{
+        $('.timer').append("0"+ minutes + " : 0" + seconds);
+      }
+        if(seconds===59){
+          seconds=-1;
+          minutes++;
+        }
+
+      }, 1000);
+
+      $('.next-button').on('click', function(){
+        clearInterval(timer);
+        console.log(timer);
+      });
     },
 
     nextChore: function (e) {
@@ -125,6 +148,30 @@
       }
       // If they are all done -> // Navigate/Redirect to "routine board" view.
       // Else -> // Re-render.
+
+      var minutes=0;
+      var seconds=0;
+      var timer=setInterval(function() {
+        $('.timer').empty();
+
+          seconds++;
+          if(seconds<=9) {
+        $('.timer').append("0"+ minutes + " : 0" + seconds);
+      } else{
+        $('.timer').append("0"+ minutes + " : 0" + seconds);
+      }
+        if(seconds===59){
+          seconds=-1;
+          minutes++;
+        }
+
+      }, 1000);
+
+      $('.next-button').on('click', function(){
+        clearInterval(timer);
+        console.log(timer);
+      });
+
     }
 
   });
