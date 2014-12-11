@@ -90,7 +90,8 @@
 body {
   @include outer-container;
   // background-color: HSLA(0, 0%, 93%, 1);
-  background: url(../images/linedpaper.png);
+  background: url(../images/cb.jpg) no-repeat center center fixed;
+  background-size: cover;
   color: #333;
   button {
     box-shadow: 0px 5px 0px HSLA(215, 55%, 39%, 1);
