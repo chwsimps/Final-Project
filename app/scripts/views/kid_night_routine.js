@@ -22,8 +22,7 @@
 
       $('#MainSection').html(this.$el);
 
-      // var timer = this.collection.toJSON();
-      // this.$el.html(this.template(timer));
+      $('.UserHeader').empty();
 
       var timer_night = App.user.attributes.time_night;
 
