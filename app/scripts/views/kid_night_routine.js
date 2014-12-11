@@ -28,11 +28,12 @@
 
       $('.start-button').click(function () {
         console.log(App.user.attributes.time_night);
-        var clock = $('.your-clock').FlipClock(timer_night, {
+        App.clock = $('.your-clock').FlipClock(timer_night, {
           countdown: true,
           clockFace: 'MinuteCounter',
           callbacks: {
             stop: function() {
+              if( App.clock.time.time > 1 ) return;
               alert("Time's Up! You'll Do It Next Time");
               $('.your-clock').empty();
               App.router.navigate('routine_board', { trigger: true });
@@ -83,10 +84,24 @@
       this.template = _.template($('#next-routine').html());
       // Re-render the view.
       this.render_routine();
+
+      App.counter=0;
+      App.timerStart = setInterval(function() {
+        $('.timer').empty();
+          App.counter++;
+          console.log(App.counter);
+      }, 1000);
+
+      $('.next-button').on('click', function(){
+        clearInterval(App.timerStart);
+        //console.log(App.timerStart);
+      });
     },
 
     nextChore: function (e) {
       e.preventDefault();
+
+      clearInterval(App.timerStart);
 
       // Incrementing (bump) this.routine.
       this.routine = this.routine + 1;
@@ -98,6 +113,19 @@
       }
       // If they are all done -> // Navigate/Redirect to "routine board" view.
       // Else -> // Re-render.
+
+      App.counter=0;
+      App.timerNext = setInterval(function() {
+        $('.timer').empty();
+          App.counter++;
+          console.log(App.counter);
+      }, 1000);
+
+      $('.next-button').on('click', function(){
+        clearInterval(App.timerNext);
+        //console.log(timer);
+      });
+      
     }
 
   });

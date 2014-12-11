@@ -18,7 +18,9 @@
 
     render: function () {
       $('.your-clock').empty();
+      
       clearInterval(App.timerNext);
+
       App.clock.stop();
 
       this.$el.html(this.template);
