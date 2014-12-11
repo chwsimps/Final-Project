@@ -38,30 +38,29 @@
               $('.your-clock').empty();
               App.router.navigate('routine_board', { trigger: true });
               if(alert) {
-                console.log('hey');
                 var start = (new Date().getDay());
 
                 switch(start) {
                   case 0:
-                    $('#starSun').html(App.user.attributes.daily_display);
+                    $('#starSun').html('<img src=' + App.user.attributes.fail_display + '/>');
                     break;
                   case 1:
-                    $('#starMon').html(App.user.attributes.daily_display);
+                    $('#starMon').html('<img src=' + App.user.attributes.fail_display + '/>');
                     break;
                   case 2:
-                    $('#starTue').html(App.user.attributes.daily_display);
+                    $('#starTue').html('<img src=' + App.user.attributes.fail_display + '/>');
                     break;
                   case 3:
                     $('#starWed').html('<img src=' + App.user.attributes.fail_display + '/>');
                     break;
                   case 4:
-                    $('#starThu').html(App.user.attributes.daily_display);
+                    $('#starThu').html('<img src=' + App.user.attributes.fail_display + '/>');
                     break;
                   case 5:
-                    $('#starFri').html(App.user.attributes.daily_display);
+                    $('#starFri').html('<img src=' + App.user.attributes.fail_display + '/>');
                     break;
                   case 6:
-                    $('#starSat').html(App.user.attributes.daily_display);
+                    $('#starSat').html('<img src=' + App.user.attributes.fail_display + '/>');
                     break;
                 }
               }

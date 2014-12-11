@@ -9,12 +9,13 @@
     template: _.template($('#parent-charts').html()),
 
     initialize: function () {
-      this.render();
-
       $('#MainSection').html(this.$el);
+
+      this.render();
     },
 
     render: function () {
+      this.$el.html(this.template);
 
       var chart = AmCharts.makeChart("chartdiv", {
           "type": "pie",
@@ -40,8 +41,6 @@
           "innerRadius": "60%",
           "labelText": "[[Task]]"
       });
-
-      this.$el.html(this.template);
 
 
     }
