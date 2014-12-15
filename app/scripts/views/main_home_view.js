@@ -4,31 +4,45 @@
 
     className: 'MainHome',
 
-    events: {},
+    events: {
+      'click .MorningRoutineMP' : 'MorningRoutineMP',
+      'click .NightRoutineMP' : 'NightRoutineMP'
+    },
+
+    template: _.template($('#home-page').html()),
 
     initialize: function () {
       this.render();
 
+      $('#MainSection').html(this.$el);
     },
 
     render: function () {
 
-      $('.MorningRoutineMP').click( function () {
+      $('body').removeClass('sunrise');
+      $('body').removeClass('moontime');
+      $('#ListSection').empty();
+      $('#ListSection2').empty();
+      $('.your-clock').empty();
 
-        $('body').addClass('sunrise');
-        // $.cookie('background-color','red');
-        $('.UserHeader').empty();
+      this.$el.html(this.template);
 
-      });
+    },
 
-      $('.NightRoutineMP').click( function () {
+    MorningRoutineMP: function (e) {
+      e.preventDefault();
 
-        $('body').addClass('moontime');
-        // $.cookie('background-color','red');
-        $('.UserHeader').empty();
+      $('body').addClass('sunrise');
 
-      });
+      App.router.navigate('morning_routines', { trigger: true });
+    },
 
+    NightRoutineMP: function (e) {
+      e.preventDefault();
+
+      $('body').addClass('moontime');
+
+      App.router.navigate('night_routines', { trigger: true });
     }
 
   });

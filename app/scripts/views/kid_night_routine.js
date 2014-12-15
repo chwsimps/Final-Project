@@ -22,7 +22,11 @@
 
       $('#MainSection').html(this.$el);
 
-      $('.UserHeader').empty();
+      $('#logOut, #ParentViewBtn').hide();
+
+      $('.MainTitle, .phoneHome').click(function () {
+        $('#logOut, #ParentViewBtn').show();
+      });
 
       var timer_night = App.user.attributes.time_night;
 
@@ -96,6 +100,10 @@
         clearInterval(App.timerStart);
         //console.log(App.timerStart);
       });
+
+      $('.MainTitle, .phoneHome').click(function () {
+        $('#logOut, #ParentViewBtn').show();
+      });
     },
 
     nextChore: function (e) {
@@ -125,7 +133,10 @@
         clearInterval(App.timerNext);
         //console.log(timer);
       });
-      
+
+      $('.MainTitle, .phoneHome').click(function () {
+        $('#logOut, #ParentViewBtn').show();
+      });
     }
 
   });
