@@ -188,6 +188,7 @@ body.moontime {
 
 .LeftMP {
   @include span-columns(6);
+  margin-top: 2.5%;
   #MorningRoutineDisplay {
     @include display-box;
     h4 {
@@ -206,6 +207,7 @@ body.moontime {
 
 .RightMP {
   @include span-columns(6);
+  margin-top: 2.5%;
   #NightRoutineDisplay {
     @include display-box;
     h4 {
