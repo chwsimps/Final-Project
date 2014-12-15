@@ -30,7 +30,7 @@
       Parse.User.logIn(username, password, {
         success: function (user) {
           App.updateUser();
-          App.router.navigate('', { trigger: true });
+          App.router.navigate('home', { trigger: true });
         },
 
         error: function (user, error) {

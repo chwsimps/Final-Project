@@ -26,12 +26,12 @@
     var user = new Parse.User({
       username: $("#signupName").val(),
       password: $("#signupPassword").val(),
-      avatar: $("#userAvatar").val(),
+      avatar: 'http://icons.iconarchive.com/icons/adorabletoon/people/64/astronaut-icon.png',
       email: $("#signupEmail").val(),
       time_morning: 1800,
       time_night: 1800,
-      daily_display: '★',
-      fail_display: 'X',
+      daily_display: 'http://icons.iconarchive.com/icons/gpritiranjan/simple-christmas/64/star-icon.png',
+      fail_display: 'http://icons.iconarchive.com/icons/mathijssen/tuxlets/64/Sad-Tux-icon.png',
       daily_reward: 'Add Daily Reward',
       weekly_reward: 'Add Weekly Reward'
       });

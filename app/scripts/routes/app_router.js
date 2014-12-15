@@ -4,7 +4,7 @@
 
     routes: {
 
-      '' : 'home',
+      'home' : 'home',
       'signup' : 'userSignUp',
       'login' : 'userLogin',
       'parent' : 'parentMain',
@@ -25,14 +25,14 @@
     },
 
     userSignUp: function () {
-      if(App.user) return App.router.navigate('', { trigger: true});
+      if(App.user) return App.router.navigate('home', { trigger: true});
 
       new App.Views.SignUpView();
 
     },
 
     userLogin: function () {
-      if(App.user) return App.router.navigate('', { trigger: true});
+      if(App.user) return App.router.navigate('home', { trigger: true});
 
       new App.Views.LoginView();
     },
