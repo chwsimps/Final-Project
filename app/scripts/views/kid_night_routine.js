@@ -89,12 +89,12 @@
       // Re-render the view.
       this.render_routine();
 
-      App.counter=0;
-      App.timerStart = setInterval(function() {
-        $('.timer').empty();
-          App.counter++;
-          console.log(App.counter);
-      }, 1000);
+      // App.counter=0;
+      // App.timerStart = setInterval(function() {
+      //   $('.timer').empty();
+      //     App.counter++;
+      //     console.log(App.counter);
+      // }, 1000);
 
       $('.next-button').on('click', function(){
         clearInterval(App.timerStart);
@@ -122,12 +122,12 @@
       // If they are all done -> // Navigate/Redirect to "routine board" view.
       // Else -> // Re-render.
 
-      App.counter=0;
-      App.timerNext = setInterval(function() {
-        $('.timer').empty();
-          App.counter++;
-          console.log(App.counter);
-      }, 1000);
+      // App.counter=0;
+      // App.timerNext = setInterval(function() {
+      //   $('.timer').empty();
+      //     App.counter++;
+      //     console.log(App.counter);
+      // }, 1000);
 
       $('.next-button').on('click', function(){
         clearInterval(App.timerNext);
