@@ -8,6 +8,7 @@
   text-align: center;
   font-weight: bold;
   height: 200px;
+  max-width: 50%;
   width: 50%;
   margin-top: 23px;
   margin-left: 25%;
@@ -132,8 +133,8 @@ body.moontime {
   .MainTitle {
     text-align: center;
     img {
-      margin-top: 18px;
-      margin-left: -65px;
+      margin-top: 1.75%;
+      margin-left: -6%;
       position: absolute;
     }
     h1 {
@@ -175,6 +176,27 @@ body.moontime {
   }
 }
 
+@media only screen and (max-width: 475px) {
+  .MainTitle img {
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    margin-bottom: -3.5em;
+  }
+}
+
+@media (max-width: 470px) {
+  .full {
+    .MainTitle {
+      .slash {
+        margin: 0 0 0 -15%;
+        position: relative;
+      }
+    }
+  }
+}
+
 #LoginSection {
   text-align: -webkit-right;
   width: 30%;
@@ -195,7 +217,7 @@ body.moontime {
       margin-top: 4px;
     }
     img {
-      margin-top: -30px;
+      margin-top: -1.7em;
       &:hover {
       animation: spin 4s linear infinite;
       @keyframes spin { 100% { -webkit-transform: rotate(360deg);
@@ -214,7 +236,7 @@ body.moontime {
       margin-top: 4px;
     }
     img {
-      margin-top: -30px;
+      margin-top: -1.7em;
       animation-play-state: paused;
       &:hover {
         animation-play-state: running;
@@ -258,6 +280,15 @@ body.moontime {
   #ParentTimingDisplay {
     @include display-box-parent;
     background-color: lightcoral;
+  }
+}
+
+@media (max-width: 500px) {
+  #ParentRoutines, #ParentTiming, #ParentRewards, #ParentCharts {
+    #ParentRoutinesDisplay, #ParentChartsDisplay, #ParentRewardsDisplay, #ParentTimingDisplay  {
+      width: 95%;
+      margin-left: 5%;
+    }
   }
 }
 
@@ -531,4 +562,10 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  footer {
+    display: none;
+  }
 }
