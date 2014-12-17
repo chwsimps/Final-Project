@@ -1,0 +1,362 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>final_proj</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="full">
+
+      <div class="UserHeader">
+        <span id="loggedIn" class="floating"></span><button id="logOut"></button>
+        <a href="#/parent"><button id="ParentViewBtn">Settings</button></a>
+      </div>
+
+      <div id="LoginSection"></div>
+
+      <div class="MainTitle">
+        <a href="#/">
+          <img class="task" src="../images/task.png" alt="" />
+          <h1 class="floating">
+            Speedy Routine
+            <span class="slash">/y</span>
+          </h1>
+        </a>
+      </div>
+
+      <div class="your-clock"></div>
+
+      <div id="CountdownClock"></div>
+
+      <div id="MainSection"></div> <!--id="MainSection"-->
+
+      <div id="ListSection"></div>
+      <div id="ListSection2"></div>
+
+      </div>
+
+
+    </div> <!--class="full"-->
+
+    <!-- Home Page Script ================================== -->
+
+    <script type="text/template" id='home-page'>
+      <div class="LeftMP">
+          <div id="MorningRoutineDisplay">
+            <a class="MorningRoutineMP" href="#/morning_routines">
+              <h4>Morning Routines</h4>
+              <img src="../images/sun-logo.png" alt="" />
+            </a>
+          </div>
+      </div>
+      <div class="RightMP">
+          <div id="NightRoutineDisplay">
+            <a class="NightRoutineMP" href="#/night_routines">
+              <h4>Bedtime Routines</h4>
+              <img class="pulse" src="../images/moon-logo.png" alt="" />
+            </a>
+          </div>
+      </div>
+    </script>
+
+    <!-- Login/Signup Scripts ================================== -->
+
+    <script type="text/template" id='user-signup'>
+      <form id="SignUp">
+        <input id="signupName" type="text" placeholder="Kid's Username" />
+        <input id="signupPassword" type="password" placeholder="Password (for Parental Settings)" />
+        <button>Sign Up</button>
+      </form>
+    </script>
+
+    <script type="text/template" id='user-login'>
+      <form id="Login">
+        <input id="userName" type="text" placeholder="Enter Username" />
+        <input id="password" type="password" placeholder="Enter Password" />
+        <!--<input id="userEmail" type="email" placeholder="Enter Email" />-->
+        <a href="#/signup" class="signup_btn">Sign Up</a>
+        <button>Log In</button>
+      </form>
+    </script>
+
+    <!-- Parents View Scripts ================================== -->
+
+    <script type="text/template" id='parent-mainPage'>
+      <div id="ParentRoutines">
+        <div id="ParentRoutinesDisplay">
+          <a class="ParRoMP" href="#/parent_routines">
+            <p>Routines</p>
+            <img src="../images/checkmark.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div id="ParentTiming">
+        <div id="ParentTimingDisplay">
+          <a class="ParTiMP" href="#/parent_timing">
+            <p>Timer</p>
+            <img src="../images/stop-clock.png" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <!--<div id="floatingImage">hey</div>-->
+
+      <div id="ParentRewards">
+        <div id="ParentRewardsDisplay">
+          <a class="ParReMP" href="#/parent_rewards">
+            <p>Rewards</p>
+            <img src="../images/trophy.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div id="ParentCharts">
+        <div id="ParentChartsDisplay">
+          <a class="ParChMP" href="#/parent_charts">
+            <p>Graphs</p>
+            <img src="../images/graph.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </script>
+
+    <!-- Parents Routines Scripts ================================== -->
+
+    <script type="text/template" id='parent-add-routines'>
+      <div id="ParentRoutineMorning">
+        <h3>Morning Routines</h3>
+        <form id="AddRoutineLeft">
+          <input type="text" id="RoutineMorningInput" placeholder="Add Morning Routine" required>
+          <!--<input type="number" id="RoutineMorningTiming" placeholder="Add Morning Countdown Timer" required>-->
+          <button id="AddMorningRoutine">Add</button>
+        </form>
+      </div>
+      <div id="ParentRoutineNight">
+        <h3>Bedtime Routines</h3>
+        <form id="AddRoutineRight">
+          <input type="text" id="RoutineNightInput" placeholder="Add Bedtime Routine" required>
+          <!--<input type="number" id="RoutineNightTiming" placeholder="Add Morning Countdown Timer" required>-->
+          <button id="AddNightRoutine">Add</button>
+        </form>
+      </div>
+    </script>
+
+    <script type="text/template" id='parent-view-routines'>
+      <% if (time_of_day === "morning") { %>
+      <li class="routines_list_morning" id="<%= objectId %>">
+        <a href='#/edit_morning/<%= objectId %>'>
+          <img src="../images/check.png" alt="" />
+          <div id="morning_routine_list"><%= routine %></div>
+        </a>
+      </li>
+      <% } %>
+    </script>
+
+    <script type="text/template" id='parent-view-routines-night'>
+      <% if (time_of_day === "night") { %>
+      <li class="routines_list_night" id="<%= objectId %>">
+        <a href='#/edit_night/<%= objectId %>'>
+          <img src="../images/check.png" alt="" />
+          <div id="night_routine_list"><%= routine %></div>
+        </a>
+      </li>
+      <% } %>
+    </script>
+
+    <script type="text/template" id='parent-edit-routines'>
+      <li class="routines_list_morning" id="<%= objectId %>">
+        <form id="edit-morning-list">
+          <input type="text" value="<%= routine %>" id="edit_moro">
+          <button class="updateTask">Update</button>
+          <button id="deleteMoTask" class="deleteTask">Delete</button>
+        </form>
+      </li>
+    </script>
+
+    <script type="text/template" id='parent-edit-routines-night'>
+      <li class="routines_list_night" id="<%= objectId %>">
+        <form id="edit-night-list">
+          <input type="text" value="<%= routine %>" id="edit_moni">
+          <button class="updateTask">Update</button>
+          <button id="deleteNiTask" class="deleteTask">Delete</button>
+        </form>
+      </li>
+    </script>
+
+    <!-- Parents Timing Scripts ================================== -->
+
+    <script type="text/template" id='parent-timing'>
+      <div id="MorningCountdown">
+        <h3>Morning Countdown Timer</h3>
+        <form id="AddTimeLeft" oninput="amount.value=rangeInput.value">
+          <span class="highlight"></span><output name="amount" for="rangeInput">45</output><span> Minutes</span>
+          <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingMorningInput" name="rangeInput" />
+          <button id="AddMorningTime"><img src="../images/lock.png" alt="" /></button>
+          <h4 id="setTime"></h4>
+        </form>
+      </div>
+      <div id="NightCountdown">
+        <h3>Bedtime Countdown Timer</h3>
+        <form id="AddTimeRight" oninput="amount.value=rangeInput.value">
+          <span class="highlight"></span><output name="amount" for="rangeInput">45</output><span> Minutes</span>
+          <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingNightInput" name="rangeInput" />
+          <button id="AddNightTime"><img src="../images/lock.png" alt="" /></button>
+          <h4 id="setTimeNight"></h4>
+        </form>
+      </div>
+    </script>
+
+    <script type="text/template" id='parent-view-time'>
+      <div class="routines_time_morning" id="<%= objectId %>">
+          <div id="morning_time_list"><%= time_morning %></div>
+      </div>
+    </script>
+
+    <script type="text/template" id='parent-view-time-night'>
+      <div class="routines_time_night" id="<%= objectId %>">
+          <div id="night_time_list"><%= time_night %></div>
+      </div>
+    </script>
+
+    <!-- Parents Rewards Scripts ================================== -->
+
+    <script type="text/template" id='parent-rewards'>
+      <div id="dailyReward">
+        <h3>Daily Reward</h3>
+        <select id="daily-reward">
+          <option value="Star">Star</option>
+          <option value="Gold Coin">Gold Coin</option>
+          <option value="Diamond">Diamond</option>
+        </select>
+        <button id="addDailyReward">Add</button>
+        <h4 id="setDailyReward"></h4>
+      </div>
+      <div id="weeklyReward">
+        <h3>Weekly Reward</h3>
+        <select id="weekly-reward">
+          <option value="Treasure Chest">Treasure Chest</option>
+          <option value="New Toy">New Toy</option>
+          <option value="Suprise">Suprise</option>
+          <option value="Kid's Pick">Kid's Pick</option>
+          <option value="Super Awesome Stuff">Awesome Stuff</option>
+        </select>
+        <button id="addWeeklyReward">Add</button>
+        <h4 id="setWeeklyReward"></h4>
+      </div>
+    </script>
+
+    <!-- Parents Charts Scripts ================================== -->
+
+    <script type="text/template" id='parent-charts'>
+      <!--<h3>Daily Progress</h3>
+      <span>Check it out!<img src="../images/down-arrow.png" alt="" /></span>
+      <table class="table-borders">
+        <thead>
+          <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="sunday"></td>
+            <td id="monday"></td>
+            <td id="tuesday"></td>
+            <td id="wednesday"></td>
+            <td id="thursday"></td>
+            <td id="friday"></td>
+            <td id="saturday"></td>
+          </tr>
+        </tbody>
+      </table>-->
+
+      <div id="chartdiv"></div>
+
+    </script>
+
+    <!-- Kids Morning Routines Scripts =========================== -->
+
+    <script type="text/template" id='start-routines'>
+      <a class="phoneHome" href="#/"><img src="../images/house.png" alt="" /></a>
+      <h3>Start Morning Routines</h3>
+      <button class="start-button">START!</button>
+    </script>
+
+    <script type="text/template" id='next-routine'>
+      <a class="phoneHome" href="#/"><img src="../images/house.png" alt="" /></a>
+      <div class="kid_morning_routines" id="<%= objectId %>">
+        <h3><%= routine %></h3>
+        <button class="next-button">NEXT</button>
+        <div class="timer"></div>
+        <!--<button class="stop">Stop</button>-->
+      </div>
+    </script>
+
+    <!-- Kids Routine Board Script =========================== -->
+
+    <script type="text/template" id='kid-routine-board'>
+      <a class="phoneHome" href="#/home"><img src="../images/house.png" alt="" /></a>
+      <h3>Routine Board</h3>
+      <span id="checkIt">Check it out!<img src="../images/down-arrow.png" alt="" /></span>
+      <table class="table-borders">
+        <thead>
+          <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>REWARD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="sunday"><span class="pulse" id="starSun"></td>
+            <td id="monday"><span class="pulse" id="starMon"></td>
+            <td id="tuesday"><span class="pulse" id="starTue"></td>
+            <td id="wednesday"><span class="pulse" id="starWed"></span></td>
+            <td id="thursday"><span class="pulse" id="starThu"></td>
+            <td id="friday"><span class="pulse" id="starFri"></td>
+            <td id="saturday"><span class="pulse" id="starSat"></td>
+            <td id="reward"><span class="pulse" id="rewardImg"></td>
+          </tr>
+        </tbody>
+      </table>
+    </script>
+
+    <footer><img id="copter" src="../images/helicopter.png" alt="" /></footer>
+
+    <!-- ===================================================== -->
+
+    <script src="scripts/vendor.js"></script>
+
+    <script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
+
+    <script type="text/javascript">
+      window.App = {};
+      App.Models = {};
+      App.Collections = {};
+      App.Views = {};
+      App.Routers = {};
+    </script>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
