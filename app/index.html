@@ -37,7 +37,7 @@
 
       <div class="MainTitle">
         <a href="#/">
-          <img class="task" src="../images/task.png" alt="" />
+          <img class="task" src="images/task.png" alt="" />
           <h1 class="floating">
             Speedy Routine
             <span class="slash">/y</span>
@@ -66,7 +66,7 @@
           <div id="MorningRoutineDisplay">
             <a class="MorningRoutineMP" href="#/morning_routines">
               <h4>Morning Routines</h4>
-              <img src="../images/sun-logo.png" alt="" />
+              <img src="images/sun-logo.png" alt="" />
             </a>
           </div>
       </div>
@@ -74,7 +74,7 @@
           <div id="NightRoutineDisplay">
             <a class="NightRoutineMP" href="#/night_routines">
               <h4>Bedtime Routines</h4>
-              <img class="pulse" src="../images/moon-logo.png" alt="" />
+              <img class="pulse" src="images/moon-logo.png" alt="" />
             </a>
           </div>
       </div>
@@ -107,7 +107,7 @@
         <div id="ParentRoutinesDisplay">
           <a class="ParRoMP" href="#/parent_routines">
             <p>Routines</p>
-            <img src="../images/checkmark.png" alt="" />
+            <img src="images/checkmark.png" alt="" />
           </a>
         </div>
       </div>
@@ -115,7 +115,7 @@
         <div id="ParentTimingDisplay">
           <a class="ParTiMP" href="#/parent_timing">
             <p>Timer</p>
-            <img src="../images/stop-clock.png" alt="" />
+            <img src="images/stop-clock.png" alt="" />
           </a>
         </div>
       </div>
@@ -126,7 +126,7 @@
         <div id="ParentRewardsDisplay">
           <a class="ParReMP" href="#/parent_rewards">
             <p>Rewards</p>
-            <img src="../images/trophy.png" alt="" />
+            <img src="images/trophy.png" alt="" />
           </a>
         </div>
       </div>
@@ -134,7 +134,7 @@
         <div id="ParentChartsDisplay">
           <a class="ParChMP" href="#/parent_charts">
             <p>Graphs</p>
-            <img src="../images/graph.png" alt="" />
+            <img src="images/graph.png" alt="" />
           </a>
         </div>
       </div>
@@ -165,7 +165,7 @@
       <% if (time_of_day === "morning") { %>
       <li class="routines_list_morning" id="<%= objectId %>">
         <a href='#/edit_morning/<%= objectId %>'>
-          <img src="../images/check.png" alt="" />
+          <img src="images/check.png" alt="" />
           <div id="morning_routine_list"><%= routine %></div>
         </a>
       </li>
@@ -176,7 +176,7 @@
       <% if (time_of_day === "night") { %>
       <li class="routines_list_night" id="<%= objectId %>">
         <a href='#/edit_night/<%= objectId %>'>
-          <img src="../images/check.png" alt="" />
+          <img src="images/check.png" alt="" />
           <div id="night_routine_list"><%= routine %></div>
         </a>
       </li>
@@ -211,7 +211,7 @@
         <form id="AddTimeLeft" oninput="amount.value=rangeInput.value">
           <span class="highlight"></span><output name="amount" for="rangeInput">45</output><span> Minutes</span>
           <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingMorningInput" name="rangeInput" />
-          <button id="AddMorningTime"><img src="../images/lock.png" alt="" /></button>
+          <button id="AddMorningTime"><img src="images/lock.png" alt="" /></button>
           <h4 id="setTime"></h4>
         </form>
       </div>
@@ -220,7 +220,7 @@
         <form id="AddTimeRight" oninput="amount.value=rangeInput.value">
           <span class="highlight"></span><output name="amount" for="rangeInput">45</output><span> Minutes</span>
           <input class="bar" type="range" min="0" max="90" step="1" value="45" id="TimingNightInput" name="rangeInput" />
-          <button id="AddNightTime"><img src="../images/lock.png" alt="" /></button>
+          <button id="AddNightTime"><img src="images/lock.png" alt="" /></button>
           <h4 id="setTimeNight"></h4>
         </form>
       </div>
@@ -302,13 +302,13 @@
     <!-- Kids Morning Routines Scripts =========================== -->
 
     <script type="text/template" id='start-routines'>
-      <a class="phoneHome" href="#/"><img src="../images/house.png" alt="" /></a>
+      <a class="phoneHome" href="#/"><img src="images/house.png" alt="" /></a>
       <h3>Start Morning Routines</h3>
       <button class="start-button">START!</button>
     </script>
 
     <script type="text/template" id='next-routine'>
-      <a class="phoneHome" href="#/"><img src="../images/house.png" alt="" /></a>
+      <a class="phoneHome" href="#/"><img src="images/house.png" alt="" /></a>
       <div class="kid_morning_routines" id="<%= objectId %>">
         <h3><%= routine %></h3>
         <button class="next-button">NEXT</button>
@@ -320,9 +320,9 @@
     <!-- Kids Routine Board Script =========================== -->
 
     <script type="text/template" id='kid-routine-board'>
-      <a class="phoneHome" href="#/home"><img src="../images/house.png" alt="" /></a>
+      <a class="phoneHome" href="#/home"><img src="images/house.png" alt="" /></a>
       <h3>Routine Board</h3>
-      <span id="checkIt">Check it out!<img src="../images/down-arrow.png" alt="" /></span>
+      <span id="checkIt">Check it out!<img src="images/down-arrow.png" alt="" /></span>
       <table class="table-borders">
         <thead>
           <tr>
@@ -351,7 +351,7 @@
       </table>
     </script>
 
-    <footer><img id="copter" src="../images/helicopter.png" alt="" /></footer>
+    <footer><img id="copter" src="images/helicopter.png" alt="" /></footer>
 
     <!-- ===================================================== -->
 
