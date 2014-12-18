@@ -143,7 +143,7 @@ body.moontime {
       display: inline-block;
       margin-top: 47px;
       margin-bottom: 29px;
-      margin-left: 40px;
+      margin-left: 3.75%;
       letter-spacing: 8px;
       animation-play-state: paused;
       &:hover {
@@ -173,27 +173,6 @@ body.moontime {
   #logOut {
     float: right;
     margin: 10px;
-  }
-}
-
-@media only screen and (max-width: 475px) {
-  .MainTitle img {
-    padding-left: 10%;
-    padding-top: 10%;
-  }
-  #MorningRoutineDisplay img, #NightRoutineDisplay img {
-    margin-bottom: -3.5em;
-  }
-}
-
-@media (max-width: 470px) {
-  .full {
-    .MainTitle {
-      .slash {
-        margin: 0 0 0 -15%;
-        position: relative;
-      }
-    }
   }
 }
 
@@ -280,15 +259,6 @@ body.moontime {
   #ParentTimingDisplay {
     @include display-box-parent;
     background-color: lightcoral;
-  }
-}
-
-@media (max-width: 500px) {
-  #ParentRoutines, #ParentTiming, #ParentRewards, #ParentCharts {
-    #ParentRoutinesDisplay, #ParentChartsDisplay, #ParentRewardsDisplay, #ParentTimingDisplay  {
-      width: 95%;
-      margin-left: 5%;
-    }
   }
 }
 
@@ -408,7 +378,7 @@ input[type="range"]::-webkit-slider-thumb {
   @include span-columns(6);
   text-align: center;
   select {
-    margin: .75em 0 1.35em 12.1em;
+    margin: 2.5% 0 4.6% 41%;
   }
   button {
     margin-bottom: 1.5em;
@@ -419,7 +389,7 @@ input[type="range"]::-webkit-slider-thumb {
   @include span-columns(6);
   text-align: center;
   select {
-    margin: .75em 0 1.35em 11em;
+    margin: 2.5% 0 4.6% 38%;
   }
   button {
     margin-bottom: 1.5em;
@@ -564,8 +534,75 @@ footer {
   width: 100%;
 }
 
+// MEDIA QUERIES
+
+@media (max-width: 431px) {
+  .full .MainTitle span {
+    margin: 0 0 0 -6.5%;
+  }
+}
+
+@media (max-width: 475px) {
+  .MainTitle img {
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    margin-bottom: -3.5em;
+  }
+  .MainTitle .slash {
+      margin: 0 0 0 -15%;
+      position: relative;
+  }
+}
+
 @media (max-width: 500px) {
+  #ParentRoutines, #ParentTiming, #ParentRewards, #ParentCharts {
+    #ParentRoutinesDisplay, #ParentChartsDisplay, #ParentRewardsDisplay, #ParentTimingDisplay  {
+      width: 95%;
+      margin-left: 5%;
+    }
+  }
+  #dailyReward select {
+    margin: 5.5% 0 10.75% 30%;
+  }
+  #weeklyReward select {
+    margin: 5.5% 0 10.75% 24%;
+  }
   footer {
     display: none;
+  }
+  #LoginSection {
+    width: 67%;
+    margin-left: 30%;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 700px) {
+  #LoginSection {
+    width: 54%;
+    margin-left: 44%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  #LoginSection {
+    width: 39%;
+    margin-left: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .full .MainTitle img {
+    display: none;
+  }
+  .full .MainTitle h1 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 980px) {
+  .full .MainTitle h1 {
+    margin-left: 6%;
   }
 }
