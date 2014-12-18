@@ -336,6 +336,8 @@ body.moontime {
   display: inline-block;
   width: 28%;
   margin-left: 35.75%;
+  zoom: 1;
+  -moz-transform: scale(1);
 }
 
 .flip-clock-label {
@@ -582,6 +584,10 @@ footer {
     width: 200px;
     max-width: none;
   }
+  .your-clock {
+    zoom: 0.37;
+    -moz-transform: scale(0.37);
+  }
 }
 
 @media (min-width: 501px) and (max-width: 700px) {
@@ -589,12 +595,20 @@ footer {
     width: 54%;
     margin-left: 44%;
   }
+  .your-clock {
+    zoom: 0.45;
+    -moz-transform: scale(0.45);
+  }
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
   #LoginSection {
     width: 39%;
     margin-left: 60%;
+  }
+  .your-clock {
+    zoom: 0.65;
+    -moz-transform: scale(0.65);
   }
 }
 
@@ -610,5 +624,12 @@ footer {
 @media (min-width: 901px) and (max-width: 980px) {
   .full .MainTitle h1 {
     margin-left: 6%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1072px) {
+  .your-clock {
+    zoom: 0.8;
+    -moz-transform: scale(0.8);
   }
 }
