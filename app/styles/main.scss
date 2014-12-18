@@ -538,7 +538,7 @@ footer {
 
 @media (max-width: 431px) {
   .full .MainTitle span {
-    margin: 0 0 0 -6.5%;
+    margin: 0 0 0 -7%;
   }
 }
 
@@ -575,6 +575,12 @@ footer {
   #LoginSection {
     width: 67%;
     margin-left: 30%;
+  }
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    margin-top: -1em;
+    margin-left: -3em;
+    width: 200px;
+    max-width: none;
   }
 }
 
