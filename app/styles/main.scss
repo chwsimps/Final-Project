@@ -2,6 +2,7 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
 
 //Mixins
 @mixin display-box {
@@ -82,9 +83,9 @@
 // Custom Styles
 
 * {
-  font-family: "Rudiment", Comic Sans MS, Arial, sans-serif;
+  font-family: "Rudiment",'Ubuntu Condensed', Arial, sans-serif;
   h1, h3, h4 {
-    font-family: "Rudiment", Comic Sans MS, Arial, sans-serif;
+    font-family: "Rudiment", 'Ubuntu Condensed', Arial, sans-serif;
   }
 }
 
@@ -530,22 +531,15 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 13.5%;
 }
 
-// Footer Section
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
 // MEDIA QUERIES
 
 @media (max-width: 431px) {
   .full .MainTitle span {
     margin: 0 0 0 -7%;
   }
-  footer {
-    display: none;
+  .your-clock {
+    zoom: 0.35;
+    -moz-transform: scale(0.35);
   }
 }
 
@@ -560,9 +554,6 @@ footer {
   .MainTitle .slash {
       margin: 0 0 0 -15%;
       position: relative;
-  }
-  footer {
-    display: none;
   }
 }
 
@@ -593,9 +584,6 @@ footer {
     zoom: 0.37;
     -moz-transform: scale(0.37);
   }
-  footer {
-    display: none;
-  }
 }
 
 @media (min-width: 501px) and (max-width: 700px) {
@@ -606,9 +594,6 @@ footer {
   .your-clock {
     zoom: 0.45;
     -moz-transform: scale(0.45);
-  }
-  footer {
-    display: none;
   }
 }
 
@@ -621,9 +606,6 @@ footer {
     zoom: 0.65;
     -moz-transform: scale(0.65);
   }
-  footer {
-    display: none;
-  }
 }
 
 @media (max-width: 900px) {
@@ -633,17 +615,11 @@ footer {
   .full .MainTitle h1 {
     margin-left: 0;
   }
-  footer {
-    display: none;
-  }
 }
 
 @media (min-width: 901px) and (max-width: 980px) {
   .full .MainTitle h1 {
     margin-left: 6%;
-  }
-  footer {
-    display: none;
   }
 }
 
@@ -651,8 +627,5 @@ footer {
   .your-clock {
     zoom: 0.8;
     -moz-transform: scale(0.8);
-  }
-  footer {
-    display: none;
   }
 }
