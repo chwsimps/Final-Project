@@ -90,6 +90,7 @@
 }
 
 body {
+  padding-bottom: 30px;
   @include outer-container;
   // background-color: HSLA(0, 0%, 93%, 1);
   background: url(../images/linedpaper.png);
@@ -109,7 +110,7 @@ body {
 }
 
 body.sunrise {
-  background: url(../images/sunrise.jpg) no-repeat center center fixed;
+  background: url(../images/sunrise.png) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
 }
@@ -560,12 +561,6 @@ input[type="range"]::-webkit-slider-thumb {
       margin-left: 5%;
     }
   }
-  #dailyReward select {
-    margin: 5.5% 0 10.75% 30%;
-  }
-  #weeklyReward select {
-    margin: 5.5% 0 10.75% 24%;
-  }
   #LoginSection {
     width: 67%;
     margin-left: 30%;
@@ -614,9 +609,15 @@ input[type="range"]::-webkit-slider-thumb {
 
 @media (max-width: 400px) {
   .your-clock {
-    zoom: 0.8;
-    -moz-transform: scale(0.8);
+    zoom: 0.75;
+    -moz-transform: scale(0.75);
     margin-left: 20%;
+  }
+  #dailyReward select {
+    margin: 5.5% 0 10.75% 24%;
+  }
+  #weeklyReward select {
+    margin: 5.5% 0 10.75% 17%;
   }
 }
 
@@ -625,6 +626,12 @@ input[type="range"]::-webkit-slider-thumb {
     zoom: 0.8;
     -moz-transform: scale(0.8);
     margin-left: 25%;
+  }
+  #dailyReward select {
+    margin: 5.5% 0 10.75% 30%;
+  }
+  #weeklyReward select {
+    margin: 5.5% 0 10.75% 24%;
   }
 }
 
