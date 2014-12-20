@@ -337,7 +337,7 @@ body.moontime {
 
 .your-clock {
   display: inline-block;
-  width: 28%;
+  width: 60%;
   margin-left: 35.75%;
   zoom: 1;
   -moz-transform: scale(1);
@@ -537,12 +537,6 @@ input[type="range"]::-webkit-slider-thumb {
   .full .MainTitle span {
     margin: 0 0 0 -7%;
   }
-  .your-clock {
-    zoom: 0.5;
-    -moz-transform: scale(0.5);
-    width: 50%;
-    margin-left: 30.75%;
-  }
 }
 
 @media (max-width: 475px) {
@@ -582,10 +576,6 @@ input[type="range"]::-webkit-slider-thumb {
     width: 200px;
     max-width: none;
   }
-  .your-clock {
-    zoom: 0.37;
-    -moz-transform: scale(0.37);
-  }
 }
 
 @media (min-width: 501px) and (max-width: 700px) {
@@ -593,20 +583,12 @@ input[type="range"]::-webkit-slider-thumb {
     width: 54%;
     margin-left: 44%;
   }
-  .your-clock {
-    zoom: 0.45;
-    -moz-transform: scale(0.45);
-  }
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
   #LoginSection {
     width: 39%;
     margin-left: 60%;
-  }
-  .your-clock {
-    zoom: 0.65;
-    -moz-transform: scale(0.65);
   }
 }
 
@@ -626,8 +608,58 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 @media (min-width: 901px) and (max-width: 1072px) {
+}
+
+// Your-Clock Media Margins
+
+@media (max-width: 400px) {
   .your-clock {
     zoom: 0.8;
     -moz-transform: scale(0.8);
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+  .your-clock {
+    zoom: 0.8;
+    -moz-transform: scale(0.8);
+    margin-left: 25%;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+  .your-clock {
+    margin-left: 21%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+  .your-clock {
+    margin-left: 26%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+  .your-clock {
+    margin-left: 26%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+  .your-clock {
+    margin-left: 30%;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 900px) {
+  .your-clock {
+    margin-left: 32%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1000px) {
+  .your-clock {
+    margin-left: 34%;
   }
 }
