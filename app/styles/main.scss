@@ -78,22 +78,17 @@
   }
 }
 
-@font-face {
-  font-family: 'Rudiment', 'Ubuntu Condensed';
-  src: url('http://www.fontsaddict.com/fontface/rudiment.ttf');
-  src: url('http://fonts.googleapis.com/css?family=Ubuntu+Condensed');
-}
-
 // Custom Styles
 
 * {
-  font-family: "Rudiment",'Ubuntu Condensed', Arial, sans-serif;
+  font-family: "Rudiment", "Ubuntu Condensed", Arial, sans-serif;
   h1, h3, h4 {
-    font-family: "Rudiment", 'Ubuntu Condensed', Arial, sans-serif;
+    font-family: "Rudiment", "Ubuntu Condensed", Arial, sans-serif;
   }
 }
 
 body {
+  font-family: "Rudiment", 'Ubuntu Condensed', Arial, sans-serif;
   padding-bottom: 30px;
   @include outer-container;
   // background-color: HSLA(0, 0%, 93%, 1);
