@@ -330,12 +330,6 @@ body.moontime {
 
 // Countdown Time for Kid Morning/Night Views
 
-.phoneHome {
-  position: fixed;
-  top: 0;
-  margin: 2% 0 0 45%;
-}
-
 .your-clock {
   display: inline-block;
   width: 60%;
@@ -684,5 +678,11 @@ input[type="range"]::-webkit-slider-thumb {
 @media (min-width: 901px) and (max-width: 1000px) {
   .your-clock {
     margin-left: 34%;
+  }
+}
+
+@media (max-width: 1208px) {
+  .full .MainTitle img {
+    display: none;
   }
 }
