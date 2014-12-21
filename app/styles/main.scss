@@ -2,7 +2,6 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
 
 //Mixins
 @mixin display-box {
@@ -79,6 +78,11 @@
   }
 }
 
+@font-face {
+  font-family: 'Rudiment', 'Ubuntu Condensed';
+  src: url('http://www.fontsaddict.com/fontface/rudiment.ttf');
+  src: url('http://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+}
 
 // Custom Styles
 
@@ -112,13 +116,11 @@ body {
 body.sunrise {
   background: url(../images/sunrise.png) no-repeat center center fixed;
   background-size: cover;
-  height: 100%;
 }
 
 body.moontime {
   background: url(../images/nighttime.png) no-repeat center center fixed;
   background-size: cover;
-  height: 100%;
 }
 
 // .MorningRoutineMP:hover + .full {
@@ -173,6 +175,9 @@ body.moontime {
   #ParentViewBtn {
     float: right;
     margin: 10px;
+    .btn-img {
+      display: none;
+    }
   }
   #logOut {
     float: right;
@@ -535,6 +540,9 @@ input[type="range"]::-webkit-slider-thumb {
 // MEDIA QUERIES
 
 @media (max-width: 431px) {
+  body.sunrise {
+    background-size: initial;
+  }
   .full .MainTitle span {
     margin: 0 0 0 -7%;
   }
@@ -570,6 +578,18 @@ input[type="range"]::-webkit-slider-thumb {
     margin-left: -3em;
     width: 200px;
     max-width: none;
+  }
+  .full #ParentViewBtn {
+    padding: 8.5px 13px;
+    .btn-img {
+      display: inline-block;
+    }
+    .btn-set {
+      display: none;
+    }
+  }
+  .full #logOut {
+    // padding: 8.5px 13px;
   }
 }
 
