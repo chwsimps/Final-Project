@@ -30,7 +30,7 @@
       email: $("#signupEmail").val(),
       time_morning: 1800,
       time_night: 1800,
-      daily_display: 'http://icons.iconarchive.com/icons/gpritiranjan/simple-christmas/64/star-icon.png',
+      daily_display: 'http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/64/star-icon.png',
       fail_display: 'http://icons.iconarchive.com/icons/mathijssen/tuxlets/64/Sad-Tux-icon.png',
       daily_reward: 'Add Daily Reward',
       weekly_reward: 'Add Weekly Reward'

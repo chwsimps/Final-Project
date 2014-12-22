@@ -14,6 +14,11 @@
       $('#MainSection').html(this.$el);
 
       this.render();
+
+      $('.phoneHome').click(function () {
+        $('#logOut, #ParentViewBtn').show();
+      });
+
     },
 
     render: function () {
@@ -29,31 +34,32 @@
 
       switch(start) {
         case 0:
-          $('#starSun').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starSun').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 1:
-          $('#starMon').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starMon').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 2:
-          $('#starTue').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starTue').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 3:
-          $('#starWed').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starWed').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 4:
-          $('#starThu').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starThu').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 5:
-          $('#starFri').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starFri').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 6:
-          $('#starSat').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starSat').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
       }
 
       var reward_weekly = App.user.attributes.weekly_reward;
       // console.log(reward_weekly);
-      $('#reward').html(App.user.attributes.weekly_reward);
+      var img = '<img src="' + App.user.attributes.weekly_reward + '" />';
+      $('#reward').html(img);
 
     }
 

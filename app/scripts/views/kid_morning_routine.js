@@ -24,7 +24,7 @@
 
       $('#logOut, #ParentViewBtn').hide();
 
-      $('.MainTitle, .phoneHome').click(function () {
+      $('.MainTitle').click(function () {
         $('#logOut, #ParentViewBtn').show();
       });
 

@@ -16,8 +16,8 @@
 
       this.render();
 
-      $('#setWeeklyReward').html(App.user.attributes.weekly_reward);
-      $('#setDailyReward').html(App.user.attributes.daily_reward);
+      $('#setWeeklyReward').html('<img src=' + App.user.attributes.weekly_reward + '/>');
+      $('#setDailyReward').html('<img src=' + App.user.attributes.daily_reward + '/>');
     },
 
     render: function () {
@@ -35,7 +35,7 @@
 
       App.user.save();
 
-      $('#setWeeklyReward').html(weekly_reward);
+      $('#setWeeklyReward').html('<img src=' + App.user.attributes.weekly_reward + '/>');
 
     },
 
@@ -48,7 +48,7 @@
 
       App.user.save();
 
-      $('#setDailyReward').html(daily_reward);
+      $('#setDailyReward').html('<img src=' + App.user.attributes.daily_reward + '/>');
 
     }
 
