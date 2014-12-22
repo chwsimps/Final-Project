@@ -178,6 +178,9 @@ body.moontime {
     float: right;
     margin: 10px;
   }
+  .lock {
+    display: none;
+  }
 }
 
 #LoginSection {
@@ -585,8 +588,14 @@ input[type="range"]::-webkit-slider-thumb {
       display: none;
     }
   }
-  .full #logOut {
-    // padding: 8.5px 13px;
+  #logOut {
+    padding: 8.5px 13px;
+  }
+  .logOutBtn {
+    display: none;
+  }
+  .full .lock {
+    display: inline-block;
   }
 }
 
@@ -631,9 +640,6 @@ input[type="range"]::-webkit-slider-thumb {
 // Your-Clock Media Margins
 
 @media (max-width: 400px) {
-  .full #loggedIn {
-    font-size: 23px;
-  }
   .your-clock {
     zoom: 0.75;
     -moz-transform: scale(0.75);

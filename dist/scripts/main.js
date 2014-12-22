@@ -1351,7 +1351,7 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
       $('#logOut').text('Log In');
     } else {
       currUsr = '<img src=' + App.user.attributes.avatar + '/>' + 'Hey ' + App.user.attributes.username + '!';
-    $('#logOut').text('Log Out');
+    $('#logOut').html('<span class="logOutBtn">Log Out</span>' + '<img class="lock" src="images/lock.png" />');
     }
     $('#loggedIn').html(currUsr);
   };
