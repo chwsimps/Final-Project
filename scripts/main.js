@@ -248,7 +248,7 @@
       email: $("#signupEmail").val(),
       time_morning: 1800,
       time_night: 1800,
-      daily_display: 'http://icons.iconarchive.com/icons/gpritiranjan/simple-christmas/64/star-icon.png',
+      daily_display: 'http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/64/star-icon.png',
       fail_display: 'http://icons.iconarchive.com/icons/mathijssen/tuxlets/64/Sad-Tux-icon.png',
       daily_reward: 'Add Daily Reward',
       weekly_reward: 'Add Weekly Reward'
@@ -665,8 +665,8 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       this.render();
 
-      $('#setWeeklyReward').html(App.user.attributes.weekly_reward);
-      $('#setDailyReward').html(App.user.attributes.daily_reward);
+      $('#setWeeklyReward').html('<img src=' + App.user.attributes.weekly_reward + '/>');
+      $('#setDailyReward').html('<img src=' + App.user.attributes.daily_reward + '/>');
     },
 
     render: function () {
@@ -684,7 +684,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       App.user.save();
 
-      $('#setWeeklyReward').html(weekly_reward);
+      $('#setWeeklyReward').html('<img src=' + App.user.attributes.weekly_reward + '/>');
 
     },
 
@@ -697,7 +697,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       App.user.save();
 
-      $('#setDailyReward').html(daily_reward);
+      $('#setDailyReward').html('<img src=' + App.user.attributes.daily_reward + '/>');
 
     }
 
@@ -951,7 +951,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       $('#logOut, #ParentViewBtn').hide();
 
-      $('.MainTitle, .phoneHome').click(function () {
+      $('.MainTitle').click(function () {
         $('#logOut, #ParentViewBtn').show();
       });
 
@@ -1123,7 +1123,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       $('#logOut, #ParentViewBtn').hide();
 
-      $('.MainTitle, .phoneHome').click(function () {
+      $('.MainTitle').click(function () {
         $('#logOut, #ParentViewBtn').show();
       });
 
@@ -1258,6 +1258,11 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       $('#MainSection').html(this.$el);
 
       this.render();
+
+      $('.phoneHome').click(function () {
+        $('#logOut, #ParentViewBtn').show();
+      });
+
     },
 
     render: function () {
@@ -1273,31 +1278,32 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       switch(start) {
         case 0:
-          $('#starSun').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starSun').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 1:
-          $('#starMon').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starMon').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 2:
-          $('#starTue').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starTue').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 3:
-          $('#starWed').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starWed').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 4:
-          $('#starThu').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starThu').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 5:
-          $('#starFri').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starFri').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
         case 6:
-          $('#starSat').html('<img src=' + App.user.attributes.daily_display + '/>');
+          $('#starSat').html('<img src=' + App.user.attributes.daily_reward + '/>');
           break;
       }
 
       var reward_weekly = App.user.attributes.weekly_reward;
       // console.log(reward_weekly);
-      $('#reward').html(App.user.attributes.weekly_reward);
+      var img = '<img src="' + App.user.attributes.weekly_reward + '" />';
+      $('#reward').html(img);
 
     }
 
