@@ -623,6 +623,9 @@ input[type="range"]::-webkit-slider-thumb {
 // Your-Clock Media Margins
 
 @media (max-width: 400px) {
+  .full #loggedIn {
+    font-size: 23px;
+  }
   .your-clock {
     zoom: 0.75;
     -moz-transform: scale(0.75);
