@@ -377,10 +377,14 @@ input[type="range"]::-webkit-slider-thumb {
 #dailyReward {
   @include span-columns(6);
   text-align: center;
+  h3 {
+    margin-bottom: 2.5%;
+  }
   select {
-    margin: 2.5% 0 4.6% 41%;
+    margin: 0 auto;
   }
   button {
+    margin-top: 4.6%;
     margin-bottom: 1.5em;
   }
 }
@@ -388,10 +392,14 @@ input[type="range"]::-webkit-slider-thumb {
 #weeklyReward {
   @include span-columns(6);
   text-align: center;
+  h3 {
+    margin-bottom: 2.5%;
+  }
   select {
-    margin: 2.5% 0 4.6% 38%;
+    margin: 0 auto;
   }
   button {
+    margin-top: 4.6%;
     margin-bottom: 1.5em;
   }
 }
@@ -632,11 +640,13 @@ input[type="range"]::-webkit-slider-thumb {
     margin-left: 20%;
     width: 65%;
   }
-  #dailyReward select {
-    margin: 5.5% 0 10.75% 24%;
-  }
-  #weeklyReward select {
-    margin: 5.5% 0 10.75% 17%;
+  #weeklyReward, #dailyReward {
+    h3 {
+      margin-bottom: 5%;
+    }
+    button {
+      margin-top: 5%;
+    }
   }
 }
 
@@ -645,12 +655,6 @@ input[type="range"]::-webkit-slider-thumb {
     zoom: 0.8;
     -moz-transform: scale(0.8);
     margin-left: 25%;
-  }
-  #dailyReward select {
-    margin: 5.5% 0 10.75% 30%;
-  }
-  #weeklyReward select {
-    margin: 5.5% 0 10.75% 24%;
   }
 }
 
