@@ -1110,7 +1110,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       'click .next-button'  : 'nextChore'
     },
 
-    template: _.template($('#start-routines').html()),
+    template: _.template($('#start-routines-night').html()),
 
     initialize: function (options) {
       this.options = options;
