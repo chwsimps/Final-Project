@@ -538,27 +538,34 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 // MEDIA QUERIES
-
-@media (max-width: 431px) {
-  body.sunrise {
-    background-size: initial;
+@media (max-width: 400px) {
+  .your-clock {
+    zoom: 0.75;
+    -moz-transform: scale(0.75);
+    margin-left: 20%;
+    width: 65%;
   }
-  .full .MainTitle span {
-    margin: 0 0 0 -7%;
+  #weeklyReward, #dailyReward {
+    h3 {
+      margin-bottom: 5%;
+    }
+    button {
+      margin-top: 5%;
+    }
+  }
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    margin-left: -3em;
   }
 }
 
-@media (max-width: 475px) {
-  .MainTitle img {
-    padding-left: 10%;
-    padding-top: 10%;
+@media (min-width: 401px) and (max-width: 500px) {
+  .your-clock {
+    zoom: 0.8;
+    -moz-transform: scale(0.8);
+    margin-left: 25%;
   }
   #MorningRoutineDisplay img, #NightRoutineDisplay img {
-    margin-bottom: -3.5em;
-  }
-  .MainTitle .slash {
-      margin: 0 0 0 -15%;
-      position: relative;
+    margin-left: -2.5em;
   }
 }
 
@@ -572,12 +579,6 @@ input[type="range"]::-webkit-slider-thumb {
   #LoginSection {
     width: 67%;
     margin-left: 30%;
-  }
-  #MorningRoutineDisplay img, #NightRoutineDisplay img {
-    margin-top: -1em;
-    margin-left: -3em;
-    width: 200px;
-    max-width: none;
   }
   .full #ParentViewBtn {
     padding: 8.5px 13px;
@@ -597,6 +598,35 @@ input[type="range"]::-webkit-slider-thumb {
   .full .lock {
     display: inline-block;
   }
+  body.sunrise, body.moontime {
+    background-size: initial;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+  .your-clock {
+    margin-left: 21%;
+  }
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    margin-left: -2em;
+  }
+  #LoginSection {
+    width: 54%;
+    margin-left: 44%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+  .your-clock {
+    margin-left: 26%;
+  }
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    margin-left: -1em;
+  }
+  #LoginSection {
+    width: 54%;
+    margin-left: 44%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -605,86 +635,23 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
-@media (min-width: 501px) and (max-width: 700px) {
-  #LoginSection {
-    width: 54%;
-    margin-left: 44%;
+@media (min-width: 701px) and (max-width: 800px) {
+  .your-clock {
+    margin-left: 30%;
   }
-}
-
-@media (min-width: 701px) and (max-width: 900px) {
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    margin-left: -1em;
+  }
   #LoginSection {
     width: 39%;
     margin-left: 60%;
   }
 }
 
-@media (max-width: 900px) {
-  .full .MainTitle img {
-    display: none;
-  }
-  .full .MainTitle h1 {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 980px) {
-  .full .MainTitle h1 {
-    margin-left: 6%;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1072px) {
-}
-
-// Your-Clock Media Margins
-
-@media (max-width: 400px) {
-  .your-clock {
-    zoom: 0.75;
-    -moz-transform: scale(0.75);
-    margin-left: 20%;
-    width: 65%;
-  }
-  #weeklyReward, #dailyReward {
-    h3 {
-      margin-bottom: 5%;
-    }
-    button {
-      margin-top: 5%;
-    }
-  }
-}
-
-@media (min-width: 401px) and (max-width: 500px) {
-  .your-clock {
-    zoom: 0.8;
-    -moz-transform: scale(0.8);
-    margin-left: 25%;
-  }
-}
-
-@media (min-width: 501px) and (max-width: 600px) {
-  .your-clock {
-    margin-left: 21%;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 700px) {
-  .your-clock {
-    margin-left: 26%;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 700px) {
-  .your-clock {
-    margin-left: 26%;
-  }
-}
-
-@media (min-width: 701px) and (max-width: 800px) {
-  .your-clock {
-    margin-left: 30%;
+@media (max-width: 800px) {
+  #MorningRoutineDisplay img, #NightRoutineDisplay img {
+    width: 200px;
+    max-width: none;
   }
 }
 
@@ -692,11 +659,26 @@ input[type="range"]::-webkit-slider-thumb {
   .your-clock {
     margin-left: 32%;
   }
+  #LoginSection {
+    width: 39%;
+    margin-left: 60%;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+  #ParentRoutines, #ParentTiming, #ParentRewards, #ParentCharts {
+    #ParentRoutinesDisplay, #ParentChartsDisplay, #ParentRewardsDisplay, #ParentTimingDisplay  {
+      width: 225px;
+    }
+  }
 }
 
 @media (min-width: 901px) and (max-width: 1000px) {
   .your-clock {
     margin-left: 34%;
+  }
+  .full .MainTitle h1 {
+    margin-left: 6%;
   }
 }
 
