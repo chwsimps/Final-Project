@@ -33,7 +33,7 @@
         <a href="#/parent"><button id="ParentViewBtn">
           <span class="btn-set">Settings</span><span class="btn-img"><img src="images/setting.png" alt="" /></span>
           </button></a>
-      </div>
+      </div> <!--UserHeader-->
 
       <div id="LoginSection"></div>
 
@@ -44,7 +44,7 @@
             Speedy Routiny
           </h1>
         </a>
-      </div>
+      </div> <!--MainTitle-->
 
       <div class="your-clock"></div>
 
@@ -54,9 +54,6 @@
 
       <div id="ListSection"></div>
       <div id="ListSection2"></div>
-
-      </div>
-
 
     </div> <!--class="full"-->
 
@@ -71,6 +68,7 @@
             </a>
           </div>
       </div>
+
       <div class="RightMP">
           <div id="NightRoutineDisplay">
             <a class="NightRoutineMP" href="#/night_routines">
@@ -111,7 +109,8 @@
             <img src="images/checkmark.png" alt="" />
           </a>
         </div>
-      </div>
+      </div> <!--ParentRoutines-->
+
       <div id="ParentTiming">
         <div id="ParentTimingDisplay">
           <a class="ParTiMP" href="#/parent_timing">
@@ -119,9 +118,7 @@
             <img src="images/stop-clock.png" alt="" />
           </a>
         </div>
-      </div>
-
-      <!--<div id="floatingImage">hey</div>-->
+      </div> <!--ParentTiming-->
 
       <div id="ParentRewards">
         <div id="ParentRewardsDisplay">
@@ -130,7 +127,8 @@
             <img src="images/trophy.png" alt="" />
           </a>
         </div>
-      </div>
+      </div> <!--ParentRewards-->
+
       <div id="ParentCharts">
         <div id="ParentChartsDisplay">
           <a class="ParChMP" href="#/parent_charts">
@@ -138,7 +136,7 @@
             <img src="images/graph.png" alt="" />
           </a>
         </div>
-      </div>
+      </div> <!--ParentCharts-->
     </script>
 
     <!-- Parents Routines Scripts ================================== -->
@@ -148,18 +146,17 @@
         <h3>Morning Routines</h3>
         <form id="AddRoutineLeft">
           <input type="text" id="RoutineMorningInput" placeholder="Add Routines" required>
-          <!--<input type="number" id="RoutineMorningTiming" placeholder="Add Morning Countdown Timer" required>-->
           <button id="AddMorningRoutine">Add</button>
         </form>
-      </div>
+      </div> <!--ParentRoutineMorning-->
+
       <div id="ParentRoutineNight">
         <h3>Bedtime Routines</h3>
         <form id="AddRoutineRight">
           <input type="text" id="RoutineNightInput" placeholder="Add Routines" required>
-          <!--<input type="number" id="RoutineNightTiming" placeholder="Add Morning Countdown Timer" required>-->
           <button id="AddNightRoutine">Add</button>
         </form>
-      </div>
+      </div> <!--ParentRoutineNight-->
     </script>
 
     <script type="text/template" id='parent-view-routines'>
@@ -215,7 +212,8 @@
           <button id="AddMorningTime"><img src="images/lock.png" alt="" /></button>
           <h4 id="setTime"></h4>
         </form>
-      </div>
+      </div> <!--MorningCountdown-->
+
       <div id="NightCountdown">
         <h3>Bedtime Countdown Timer</h3>
         <form id="AddTimeRight" oninput="amount.value=rangeInput.value">
@@ -224,7 +222,7 @@
           <button id="AddNightTime"><img src="images/lock.png" alt="" /></button>
           <h4 id="setTimeNight"></h4>
         </form>
-      </div>
+      </div> <!--NightCountdown-->
     </script>
 
     <script type="text/template" id='parent-view-time'>
@@ -252,7 +250,8 @@
         </select>
         <button id="addDailyReward">Add</button>
         <h4 id="setDailyReward"></h4>
-      </div>
+      </div> <!--dailyReward-->
+
       <div id="weeklyReward">
         <h3>Weekly Reward</h3>
         <select id="weekly-reward">
@@ -264,41 +263,13 @@
         </select>
         <button id="addWeeklyReward">Add</button>
         <h4 id="setWeeklyReward"></h4>
-      </div>
+      </div> <!--weeklyReward-->
     </script>
 
     <!-- Parents Charts Scripts ================================== -->
 
     <script type="text/template" id='parent-charts'>
-      <!--<h3>Daily Progress</h3>
-      <span>Check it out!<img src="../images/down-arrow.png" alt="" /></span>
-      <table class="table-borders">
-        <thead>
-          <tr>
-            <th>Sunday</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td id="sunday"></td>
-            <td id="monday"></td>
-            <td id="tuesday"></td>
-            <td id="wednesday"></td>
-            <td id="thursday"></td>
-            <td id="friday"></td>
-            <td id="saturday"></td>
-          </tr>
-        </tbody>
-      </table>-->
-
       <div id="chartdiv"></div>
-
     </script>
 
     <!-- Kids Routines Scripts =========================== -->
@@ -318,7 +289,6 @@
         <h3><%= routine %></h3>
         <button class="next-button">NEXT</button>
         <div class="timer"></div>
-        <!--<button class="stop">Stop</button>-->
       </div>
     </script>
 
