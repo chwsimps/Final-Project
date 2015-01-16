@@ -296,6 +296,7 @@
 
     render: function () {
 
+      $('#logOut, #ParentViewBtn, #loggedIn').show();
       $('body').removeClass('sunrise');
       $('body').removeClass('moontime');
       $('#ListSection').empty();
@@ -949,11 +950,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       $('#MainSection').html(this.$el);
 
-      $('#logOut, #ParentViewBtn').hide();
-
-      $('.MainTitle').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
+      $('#logOut, #ParentViewBtn, #loggedIn').hide();
 
       var timer_morning = App.user.attributes.time_morning;
 
@@ -1055,9 +1052,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
         //console.log(App.timerStart);
       });
 
-      $('.MainTitle, .phoneHome').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
     },
 
     nextChore: function (e) {
@@ -1088,9 +1082,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
         //console.log(timer);
       });
 
-      $('.MainTitle, .phoneHome').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
     }
 
   });
@@ -1121,11 +1112,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
       $('#MainSection').html(this.$el);
 
-      $('#logOut, #ParentViewBtn').hide();
-
-      $('.MainTitle').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
+      $('#logOut, #ParentViewBtn, #loggedIn').hide();
 
       var timer_night = App.user.attributes.time_night;
 
@@ -1347,7 +1334,7 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
     App.user = Parse.User.current();
     var currUsr;
     if (App.user == null){
-      currUsr = '';
+      App.currUsr = '';
       $('#logOut').text('Log In');
     } else {
       currUsr = '<img src=' + App.user.attributes.avatar + '/>' + 'Hey ' + App.user.attributes.username + '!';
