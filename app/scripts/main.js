@@ -34,7 +34,7 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
     App.user = Parse.User.current();
     var currUsr;
     if (App.user == null){
-      currUsr = '';
+      App.currUsr = '';
       $('#logOut').text('Log In');
     } else {
       currUsr = '<img src=' + App.user.attributes.avatar + '/>' + 'Hey ' + App.user.attributes.username + '!';

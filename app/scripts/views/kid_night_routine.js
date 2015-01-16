@@ -22,11 +22,7 @@
 
       $('#MainSection').html(this.$el);
 
-      $('#logOut, #ParentViewBtn').hide();
-
-      $('.MainTitle').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
+      $('#logOut, #ParentViewBtn, #loggedIn').hide();
 
       var timer_night = App.user.attributes.time_night;
 

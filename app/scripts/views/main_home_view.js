@@ -19,6 +19,7 @@
 
     render: function () {
 
+      $('#logOut, #ParentViewBtn, #loggedIn').show();
       $('body').removeClass('sunrise');
       $('body').removeClass('moontime');
       $('#ListSection').empty();

@@ -22,11 +22,7 @@
 
       $('#MainSection').html(this.$el);
 
-      $('#logOut, #ParentViewBtn').hide();
-
-      $('.MainTitle').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
+      $('#logOut, #ParentViewBtn, #loggedIn').hide();
 
       var timer_morning = App.user.attributes.time_morning;
 
@@ -128,9 +124,6 @@
         //console.log(App.timerStart);
       });
 
-      $('.MainTitle, .phoneHome').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
     },
 
     nextChore: function (e) {
@@ -161,9 +154,6 @@
         //console.log(timer);
       });
 
-      $('.MainTitle, .phoneHome').click(function () {
-        $('#logOut, #ParentViewBtn').show();
-      });
     }
 
   });
