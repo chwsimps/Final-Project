@@ -191,6 +191,13 @@ body.moontime {
   margin: 0 1.25%;
 }
 
+#edit-morning-list, #edit-night-list {
+  width: 90%;
+  input {
+    width: 91.5%;
+  }
+}
+
 // Main Page Routes to Morning/Night Views
 
 .LeftMP {
@@ -282,9 +289,13 @@ body.moontime {
 
 #ListSection {
   @include span-columns(6);
+  width: 48%;
+  margin: 0 1.25%;
 }
 #ListSection2 {
   @include span-columns(6);
+  width: 48%;
+  margin: 0 1.25%;
 }
 
 .updateTask {
