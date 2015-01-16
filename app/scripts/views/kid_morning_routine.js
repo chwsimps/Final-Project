@@ -2,8 +2,6 @@
 
   App.Views.KidMorningRoutine = Parse.View.extend({
 
-    // tagName: 'ul',
-
     className: 'KidMorningRoutines',
 
     events: {
@@ -112,13 +110,6 @@
       // Re-render the view.
       this.render_routine();
 
-      // App.counter=0;
-      // App.timerStart = setInterval(function() {
-      //   $('.timer').empty();
-      //     App.counter++;
-      //     console.log(App.counter);
-      // }, 1000);
-
       $('.next-button').on('click', function(){
         clearInterval(App.timerStart);
         //console.log(App.timerStart);
@@ -139,15 +130,6 @@
       } else {
         this.render_routine();
       }
-      // If they are all done -> // Navigate/Redirect to "routine board" view.
-      // Else -> // Re-render.
-
-      // App.counter=0;
-      // App.timerNext = setInterval(function() {
-      //   $('.timer').empty();
-      //     App.counter++;
-      //     console.log(App.counter);
-      // }, 1000);
 
       $('.next-button').on('click', function(){
         clearInterval(App.timerNext);

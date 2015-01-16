@@ -2,8 +2,6 @@
 
   App.Views.KidRoutineBoard = Parse.View.extend({
 
-    // tagName: 'ul'
-
     className: 'KidsRoutineBoard',
 
     events: {},
