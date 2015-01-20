@@ -244,7 +244,7 @@
     var user = new Parse.User({
       username: $("#signupName").val(),
       password: $("#signupPassword").val(),
-      avatar: 'http://icons.iconarchive.com/icons/adorabletoon/people/64/astronaut-icon.png',
+      avatar: 'http://icons.iconarchive.com/icons/martin-berube/people/64/astronaut-icon.png',
       email: $("#signupEmail").val(),
       time_morning: 1800,
       time_night: 1800,
@@ -930,8 +930,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
   App.Views.KidMorningRoutine = Parse.View.extend({
 
-    // tagName: 'ul',
-
     className: 'KidMorningRoutines',
 
     events: {
@@ -1040,13 +1038,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       // Re-render the view.
       this.render_routine();
 
-      // App.counter=0;
-      // App.timerStart = setInterval(function() {
-      //   $('.timer').empty();
-      //     App.counter++;
-      //     console.log(App.counter);
-      // }, 1000);
-
       $('.next-button').on('click', function(){
         clearInterval(App.timerStart);
         //console.log(App.timerStart);
@@ -1067,15 +1058,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       } else {
         this.render_routine();
       }
-      // If they are all done -> // Navigate/Redirect to "routine board" view.
-      // Else -> // Re-render.
-
-      // App.counter=0;
-      // App.timerNext = setInterval(function() {
-      //   $('.timer').empty();
-      //     App.counter++;
-      //     console.log(App.counter);
-      // }, 1000);
 
       $('.next-button').on('click', function(){
         clearInterval(App.timerNext);
@@ -1091,8 +1073,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 (function () {
 
   App.Views.KidNightRoutine = Parse.View.extend({
-
-    // tagName: 'ul',
 
     className: 'KidNightRoutines',
 
@@ -1175,13 +1155,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       // Re-render the view.
       this.render_routine();
 
-      // App.counter=0;
-      // App.timerStart = setInterval(function() {
-      //   $('.timer').empty();
-      //     App.counter++;
-      //     console.log(App.counter);
-      // }, 1000);
-
       $('.next-button').on('click', function(){
         clearInterval(App.timerStart);
         //console.log(App.timerStart);
@@ -1205,15 +1178,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       } else {
         this.render_routine();
       }
-      // If they are all done -> // Navigate/Redirect to "routine board" view.
-      // Else -> // Re-render.
-
-      // App.counter=0;
-      // App.timerNext = setInterval(function() {
-      //   $('.timer').empty();
-      //     App.counter++;
-      //     console.log(App.counter);
-      // }, 1000);
 
       $('.next-button').on('click', function(){
         clearInterval(App.timerNext);
@@ -1232,8 +1196,6 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 (function () {
 
   App.Views.KidRoutineBoard = Parse.View.extend({
-
-    // tagName: 'ul'
 
     className: 'KidsRoutineBoard',
 

@@ -26,7 +26,7 @@
     var user = new Parse.User({
       username: $("#signupName").val(),
       password: $("#signupPassword").val(),
-      avatar: 'http://icons.iconarchive.com/icons/adorabletoon/people/64/astronaut-icon.png',
+      avatar: 'http://icons.iconarchive.com/icons/martin-berube/people/64/astronaut-icon.png',
       email: $("#signupEmail").val(),
       time_morning: 1800,
       time_night: 1800,
