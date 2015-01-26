@@ -2,11 +2,6 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
 
 (function () {
 
-  $(window).load(function() {
-    // Animate loader off screen
-    $(".se-pre-con").fadeOut("slow");;
-  });
-
   //instance of collection
   App.tasks = new App.Collections.Routines();
   App.times = new App.Collections.Times();
