@@ -82,6 +82,19 @@
   }
 }
 
+// Animation display while page is loading
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../images/712.GIF') 50% 50% no-repeat,
+              url('../images/astronaut.png') 50% 50% no-repeat #FDFDFD;
+}
+
 // Custom Styles
 
 * {
