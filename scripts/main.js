@@ -1262,6 +1262,10 @@ App.Views.ParentAddRoutine = Parse.View.extend({
 
 Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q0jjAgJq0HHKbcJEnkfbak9");
 
+$(window).load(function() {
+  $(".loader").fadeOut("slow");
+})
+
 (function () {
 
   //instance of collection
