@@ -1,10 +1,10 @@
 Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q0jjAgJq0HHKbcJEnkfbak9");
 
-$(window).load(function() {
-  $(".loader").fadeOut("slow");
-})
-
 (function () {
+
+  // $(window).load(function() {
+  //   $(".loader").fadeOut("slow");
+  // })
 
   //instance of collection
   App.tasks = new App.Collections.Routines();
