@@ -97,6 +97,13 @@
 
 // Custom Styles
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 * {
   font-family: "Rudiment", "Coming Soon", Arial, sans-serif;
   h1, h3, h4 {
@@ -126,11 +133,13 @@ body {
 body.sunrise {
   background: url(../images/sunrise.png) no-repeat center center fixed;
   background-size: cover;
+  height: 100%;
 }
 
 body.moontime {
   background: url(../images/moon2.png) no-repeat center center fixed;
   background-size: cover;
+  height: 100%;
 }
 
 // Main Page & User Login/Signup View
