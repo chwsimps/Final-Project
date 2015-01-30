@@ -82,19 +82,6 @@
   }
 }
 
-// Animation display while page is loading
-
-// .loader {
-//   position: fixed;
-//   left: 0px;
-//   top: 0px;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 9999;
-//   background: url('../images/712.GIF') 50% 50% no-repeat,
-//               url('../images/astronaut.png') 50% 50% no-repeat #FDFDFD;
-// }
-
 // Custom Styles
 
 html {
@@ -656,6 +643,14 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
+@media (min-width: 501px) and (max-width: 900px) {
+  #ParentRoutines, #ParentTiming, #ParentRewards, #ParentCharts {
+    #ParentRoutinesDisplay, #ParentChartsDisplay, #ParentRewardsDisplay, #ParentTimingDisplay  {
+      width: 225px;
+    }
+  }
+}
+
 @media (min-width: 601px) and (max-width: 700px) {
   .your-clock {
     margin-left: 26%;
@@ -702,14 +697,6 @@ input[type="range"]::-webkit-slider-thumb {
   #LoginSection {
     width: 39%;
     margin-left: 60%;
-  }
-}
-
-@media (min-width: 501px) and (max-width: 900px) {
-  #ParentRoutines, #ParentTiming, #ParentRewards, #ParentCharts {
-    #ParentRoutinesDisplay, #ParentChartsDisplay, #ParentRewardsDisplay, #ParentTimingDisplay  {
-      width: 225px;
-    }
   }
 }
 
