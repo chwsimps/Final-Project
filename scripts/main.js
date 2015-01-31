@@ -261,6 +261,7 @@
           // Hooray! Let them use the app now.
           App.updateUser();
           App.router.navigate('', { trigger: true });
+          alert('Parents - Make sure to update Routines, Timer, & Rewards in Settings!');
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
@@ -1264,10 +1265,6 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
 
 (function () {
 
-  // $(window).load(function() {
-  //   $(".loader").fadeOut("slow");
-  // })
-
   //instance of collection
   App.tasks = new App.Collections.Routines();
   App.times = new App.Collections.Times();
@@ -1310,13 +1307,8 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
   };
   App.updateUser();
 
-  $('#copter').hover( function () {
-  $(this).toggleClass('animated bounceOutRight')
-});
-
-
-$('.ParRoMP').hover( function () {
-  $('#floatingImage').toggleClass('animated flip')
-});
+  $('.ParRoMP').hover( function () {
+    $('#floatingImage').toggleClass('animated flip')
+  });
 
 }());
