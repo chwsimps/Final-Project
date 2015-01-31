@@ -33,9 +33,10 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
   App.updateUser = function (){
     App.user = Parse.User.current();
     var currUsr;
-    if (App.user == null){
+    if (App.user == null) {
       App.currUsr = '';
       $('#logOut').text('Log In');
+      $('#loggedIn').hide();
     } else {
       currUsr = '<img src=' + App.user.attributes.avatar + '/>' + 'Hey ' + App.user.attributes.username + '!';
     $('#logOut').html('<span class="logOutBtn">Log Out</span>' + '<img class="lock" src="images/lock.png" />');
