@@ -250,8 +250,8 @@
       time_night: 1800,
       daily_display: 'http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/64/star-icon.png',
       fail_display: 'http://icons.iconarchive.com/icons/mathijssen/tuxlets/64/Sad-Tux-icon.png',
-      daily_reward: 'Add Daily Reward',
-      weekly_reward: 'Add Weekly Reward'
+      daily_reward: 'http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/64/star-icon.png',
+      weekly_reward: 'http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/64/trophy-icon.png'
       });
 
       // user.signUp();
@@ -1296,9 +1296,10 @@ Parse.initialize("FjJjRl8DU1m2DZy1BQiTuLhajPHq6AXtEESyV6EY", "AhntxdGEcM6rckjx6Q
   App.updateUser = function (){
     App.user = Parse.User.current();
     var currUsr;
-    if (App.user == null){
+    if (App.user == null) {
       App.currUsr = '';
       $('#logOut').text('Log In');
+      $('#loggedIn').hide();
     } else {
       currUsr = '<img src=' + App.user.attributes.avatar + '/>' + 'Hey ' + App.user.attributes.username + '!';
     $('#logOut').html('<span class="logOutBtn">Log Out</span>' + '<img class="lock" src="images/lock.png" />');
