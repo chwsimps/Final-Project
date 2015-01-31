@@ -43,6 +43,7 @@
           // Hooray! Let them use the app now.
           App.updateUser();
           App.router.navigate('', { trigger: true });
+          alert('Parents - Make sure to update Routines, Timer, & Rewards in Settings!');
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
