@@ -261,7 +261,7 @@
           // Hooray! Let them use the app now.
           App.updateUser();
           App.router.navigate('', { trigger: true });
-          alert('Parents - Make sure to update Routines, Timer, & Rewards in Settings!');
+          alert('Welcome!  Please make sure to add Routines in Settings for best results!');
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
@@ -1028,6 +1028,7 @@ App.Views.ParentAddRoutine = Parse.View.extend({
       this.$el.empty();
 
       var chore = this.collection[this.routine].toJSON();
+      
       this.$el.html(this.template(chore));
     },
 
