@@ -99,6 +99,7 @@
       this.$el.empty();
 
       var chore = this.collection[this.routine].toJSON();
+      
       this.$el.html(this.template(chore));
     },
 
